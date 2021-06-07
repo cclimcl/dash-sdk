@@ -1,7 +1,7 @@
 # Project information
-site_name: DASH SDK
+site_name: d.ASH SDK
 site_url: https://dconstruct-tech.github.io/dash-sdk-test/
-site_author: Chiara Lim
+site_author: dConstruct Technologies Team
 
 # Repository
 repo_name: dconstruct-tech/dash-sdk
@@ -11,7 +11,7 @@ edit_uri: ""
 theme:
   name: material
   logo: 'img/logo.png'
-  favicon: 'img/logo.png'
+  favicon: 'img/white.png'
   language: en
   features:
     # - navigation.instant
@@ -76,3 +76,6 @@ nav:
     - 4.0 Map Loading: getting-started/map-loading.md
     - 5.0 Localisation: getting-started/localization.md
     - 6.0 Waypoint recording and sending: getting-started/waypoint.md
+  - SDK Configuration:
+    - 1.0 Robot Configuration: sdk-config/robot-config.md
+    - 2.0 Auto Configuration: sdk-config/auto-config.md
