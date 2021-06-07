@@ -1,0 +1,55 @@
+# Project information
+site_name: DASH SDK
+site_url: https://dconstruct-tech.github.io/dash-sdk-test/
+site_author: Chiara Lim
+
+# Repository
+repo_name: dconstruct-tech/dash-sdk
+repo_url: https://github.com/dconstruct-tech/dash-sdk-test/
+edit_uri: ""
+
+theme:
+  name: material
+
+  language: en
+  features:
+    # - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+  font:
+    text: Barlow
+    code: Roboto Mono
+  logo: 'img/white.png'
+  favicon: 'img/logo.png'
+
+# Customization
+extra:
+  homepage: https://www.dconstruct.co/
+
+# Extensions
+markdown_extensions:
+    - attr_list
+    - admonition
+    - pymdownx.highlight:
+        linenums_style: pymdownx-inline
+    - pymdownx.superfences
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.smartsymbols
