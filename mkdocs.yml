@@ -10,16 +10,20 @@ edit_uri: ""
 
 theme:
   name: material
-
+  logo: 'img/logo.png'
+  favicon: 'img/logo.png'
   language: en
   features:
     # - navigation.instant
     - navigation.sections
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - toc.integrate
   palette:
     - scheme: default
-      primary: green
-      accent: green
+      primary: red
+      accent: red
       toggle:
       icon: material/toggle-switch-off-outline
       name: Switch to dark mode
@@ -32,8 +36,10 @@ theme:
   font:
     text: Barlow
     code: Roboto Mono
-  logo: 'img/white.png'
-  favicon: 'img/logo.png'
+
+# Plugins  
+plugins:
+  - search
 
 # Customization
 extra:
@@ -53,3 +59,20 @@ markdown_extensions:
     - pymdownx.mark
     - pymdownx.tilde
     - pymdownx.smartsymbols
+
+# Page tree
+nav:
+  - Home: 
+    - Introduction: index.md
+  - Setup:
+    - 1.0 Installing Desktop Dependencies: setup/desktop-dep.md
+    - 2.0 Payload Registration: setup/payload-reg.md
+    - 3.0 Setting up d.ASH Server: setup/dash-server.md
+    - 4.0 Setting up ROS Driver: setup/ros-driver.md
+  - Getting Started:
+    - 1.0 Configuring Spot: getting-started/config-spot.md
+    - 2.0 Configuring Sensors: getting-started/config-connect.md
+    - 3.0 UE Client Setup: getting-started/UE-client.md
+    - 4.0 Map Loading: getting-started/map-loading.md
+    - 5.0 Localisation: getting-started/localization.md
+    - 6.0 Waypoint recording and sending: getting-started/waypoint.md
