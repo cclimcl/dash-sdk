@@ -9,8 +9,9 @@ repo_url: https://github.com/dconstruct-tech/dash-sdk-test/
 edit_uri: ""
 
 theme:
-  name: null
-  custom_dir: mkdocs-material/material
+  name: readthedocs
+  # name: null
+  # custom_dir: mkdocs-material/material
 
   # 404 page
   static_templates:
