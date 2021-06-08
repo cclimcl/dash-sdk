@@ -1,6 +1,8 @@
 # ROS Driver
 As mentioned, the ROS driver is a ROS node handles computational calls and sends control commands to the d.ASH server. It acts as an intermediate layer for ROS messages to be communicated with d.ASH server and unreal-clients through [gRPC](https://grpc.io/docs/what-is-grpc/introduction/).
 
+
+
 ### 4.1 ^^Update External Libraries^^ 
 
 First, let's update the external libs, more specifically the `grpc_layer`, by executing the following commands:

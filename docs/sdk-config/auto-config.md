@@ -2,7 +2,7 @@
 
 This section of the d.ASH SDK documentation provides details about the configuration file for the robot `autoConfig.json`. Information in this section includes variable and definitions to configure autonomy.
 
-### 2.1 ^^Config File^^
+### 3.1 ^^Config File^^
 
 ``` python
 { 
