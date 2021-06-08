@@ -9,7 +9,7 @@ repo_url: https://github.com/dconstruct-tech/dash-sdk-test/
 edit_uri: ""
 
 theme:
-  name: readthedocs
+  name: material
   # name: null
   # custom_dir: mkdocs-material/material
 
