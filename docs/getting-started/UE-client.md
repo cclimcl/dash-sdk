@@ -1,6 +1,6 @@
 # d.ASH Autonomy Controller
 
-As mentioned previously, the d.ASH autonomy controller is the GUI (graphical user interface) for the d.ASH SDK. It encompasses the interactive visual components for d.ASH's software and displays different elements for users to interact with to control your robot. This section of the d.ASH SDK documentation provides details about setting up the d.ASH autonomy controller, including information on ...
+As mentioned previously, the d.ASH autonomy controller is the GUI (graphical user interface) for the d.ASH SDK. It encompasses the interactive visual components for d.ASH's software and displays different elements for users to interact with to control your robot. This section of the d.ASH SDK documentation provides details about setting up the d.ASH autonomy controller, including information on its respective components.
 
 ---
 ### 3.1 ^^Main Components^^
@@ -16,88 +16,96 @@ As mentioned previously, the d.ASH autonomy controller is the GUI (graphical use
 
 ### 3.2 ^^Login^^
 
+The login tab allow dConstruct users to log into the d.ASH autonomy controller using their cloud admin credentials.
+
+
 ![Screenshot](img/login.png#center){: style="width:500px" }
 
 Ensure login credentials match ...
 
 ### 3.3 ^^Robot Connection^^
 
-![Screenshot](img/connect-robot.png#center){: style="width:500px" }
+The robot connection tab allow users to connect/disconnect their respective robots to the d.ASH autonomy controller.
 
-1.	Robots that are online and ready to be used, you can select which robot to connect to
-2.	Robots that you have connected to in the client, you can select which robot to manipulate from this list
-3.	Press to connect to the robot selected in the online list, the robot will then move to the connected list
-4.	Press to disconnect from the robot in the connected list
+![Screenshot](img/robot-connect.png#center){: style="width:500px" }
 
-Init Pose: Tells the robot where its rough initial position is, draw the arrow by: 
-1.	Click init pose
-2.	left clicking and dragging the mouse on the grid
+1. ^^Online pannel^^: Select from a list of robots that are online and ready to be used to connect to.
+2. ^^Connected pannel^^: Select from a list of robots that you have connected to in the client to manipulate.
+3. ^^Add button^^: Press to connect to the robot selected in the online list to add the robot to the connected list.
+4. ^^Minus button^^: Press to disconnect from a robot in the connected list.
 
 ![Screenshot](img/init.png#center){: style="width:500px" }
 
-Follow: Toggle on to have the camera follow the selected dog
+5. ^^Init pose^^: Tells the robot where its rough initial position is. To draw the arrow: 
+      - Click init pose
+      - Left click and drag the mouse on the grid
+
+!!! tip "Follow"
+      Toggle on to have the camera follow the selected dog.
 
 ---
 
 ### 3.4 ^^Routes^^
 
+The routes tab allow users to set routes for the robot to follow using waypoints. Add/remove waypoints to build your own custom routes.
+
+#### 3.4.1 Route Controls
+
 ![Screenshot](img/routes.png#center){: style="width:500px" }
 
-1.	Text box to enter route name to add
-2.	Click to add route of given name
-3.	Click to select a route
-4.	 Click to remove selected route
-5.	Click to add waypoints to selected route
-6.	Load/save all routes
-7.	Segment number, use keypad +/- to increment/decrement segment
+1. ^^Route name pannel^^: Enter route name to add.
+2. ^^Add button^^: Click to add route of given name.
+3. ^^Route selection pannel^^: Click to select a route.
+4. ^^Minus button^^: Click to remove selected route.
+5. ^^Waypoint button^^: Click to add waypoints to selected route.
+6. ^^Load/save button^^: Load/save all routes.
+7. ^^Segment pannel^^: Use keypad +/- to increment/decrement segment number.
 
-Robot Follow Route: Make the selected robot follow the selected route
+#### 3.4.1 Setting Up Routes
+
+To make a selected robot follow a selected route, add waypoints by clicking on the grid. Use `WASD` and right-click on the mouse to manipulate the view.
 
 ![Screenshot](img/waypoint-1.png#center){: style="width:500px" }
 
--	Add waypoints by clicking on the grid, you can use WASD + Right click mouse to manipulate the view.
--	Exit waypoint mode by middle clicking the mouse
+
+Once the waypoints have been set, exit waypoint mode by middle clicking the mouse. On the other hand, to remove a waypoint, click on the waypoint (selected waypoint change to the color orange), and press the `delete` ket to remove.
 
 ![Screenshot](img/waypoint-2.png#center){: style="width:500px" }
 
--	Delete waypoints by clicking the waypoint
--	Selected waypoint change to orange color
--	Press del to remove
-
 ![Screenshot](img/waypoint-3.png#center){: style="width:500px" }
 
--	Change elevation by moving the floor grid
--	You can move floor grid in waypoint mode by pressing ctrl+mouse scroll
+You can also adjust the elevation of the grid by pressing the key `ctrl` and the mouse scroll moving the floor grid in waypoint mode. A waypoint is created when you click on grid, so, to create elevated waypoints, move grid up/down and then click.
 
 ![Screenshot](img/waypoint-4.png#center){: style="width:500px" }
 
--	You can adjust the the elevation of the waypoint by moving the grid
--	Waypoint is created when you click on grid, to create elevated waypoints, move grid up/down then click.
 
 ### 3.5 ^^Map Settings^^
 
+The map settings tab allow users to adjust highpass, lowpass, UV Scale, and UV offset settings to customise the visuals of your map/
+
 ![Screenshot](img/map.png#center){: style="width:500px" }
 
-1.	Low pass, voxels below this value is visible. Voxels in maps have elevation, by lowering low pass, voxels above the low pass will be cropped
+1. ^^Low pass slider^^: Voxels below this value is visible. Voxels in maps have elevation, and by lowering the low pass, voxels above the low pass will be cropped.
 
 ![Screenshot](img/map-2.png#center){: style="width:500px" }
 
-Notice that the ceiling voxels have now been cropped by reducing the low pass
+Notice that the ceiling voxels have now been cropped by reducing the low pass.
 
 ### 3.6 ^^Layer Visibility^^
 
-![Screenshot](img/layer.png#center){: style="width:500px" }
+The layer visibility tab allow users to toggle the visibility of various items on the map.
 
-Toggles visibility of various items
+![Screenshot](img/layer.png#center){: style="width:500px" }
 
 ### 3.7 ^^Load Scans^^
 
+The load scans tab allow users to preview scans from the d.ASH Pack.
+
 ![Screenshot](img/load-scan.png#center){: style="width:500px" }
 
-Scans from dash pack can be previewed here
-1.	Select your down sample size in metres, large value means lower quality, but faster loading
-2.	You can pick loaded point clouds to toggle translucency
+1. ^^Vox downsample size pannel^^: Select your down sample size (in metres). A large value means lower quality, but faster loading.
+2. ^^Point clouds button^^: Pick loaded point clouds to toggle translucency.
 
 ![Screenshot](img/load-scan-2.png#center){: style="width:500px" }
 
-Translucent mode
+Translucent mode.

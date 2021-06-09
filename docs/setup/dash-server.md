@@ -1,39 +1,9 @@
 # Setting Up d.ASH Server
 
-As mentioned previously, the d.ASH server acts as a secured py-server responsible for sending control commands to the robot and for broadcasting data to any given remote systems. This section of the d.ASH SDK documentation provides details about setting up the d.ASH server. Information in this section includes python requirements, compiling, and testing.
-
-### 3.1 ^^Python Requirements^^
-
-The d.ASH SDK works with [Python 3.7](https://www.python.org/downloads/release/python-370/). To properly run the server, you will also need to install a python package installer and a python environment management system.
-
----
-
-#### 3.1.1 Pip Installation
-[Pip](https://pip.pypa.io/en/stable/installing/) is a package installer for Python. The d.ASH SDK and the third-party packages used by many of its programming examples use pip to install. To install pip, run the following command on Ubuntu:
-
-``` python3
-sudo apt install python3.7 python3-pip python-pip
-python3.7 -m pip instal -- upgrade pip
-```
-It is recommended that you install an environment for Python. There are two ways to set up the Python 3.7 environment: via Conda or `apt-get`. 
-
----
-
-#### 3.1.2 Conda Installation
-Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. First, install [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation). Then, to set up the new environment, execute the following command: 
-```
-$ conda create --name py37 python=3.7
-```
+As mentioned previously, the d.ASH server acts as a secured py-server responsible for sending control commands to the robot and for broadcasting data to any given remote systems. This section of the d.ASH SDK documentation provides details about setting up the d.ASH server. Information in this section includes compiling, and testing.
 
 
-#### 3.1.3 apt-get
-If Conda is not installed, you can choose to use `apt-get` to an environment for Python. Installed in Ubuntu and any Ubuntu-based Linux distribution, `apt-get` is tool for installing, upgrading, and cleaning packages. To set up the new environment, execute the following command:
-```
-$ sudo apt-get install -y python3.7-dev
-```
----
-
-### 3.2 ^^Installing d.ASH Server Dependencies^^
+### 3.1 ^^Installing d.ASH Server Dependencies^^
 
 To install the d.ASH server dependencies using pip, the following [desktop dependencies](/setup/desktop-dep) must be set up prior:
 
@@ -69,27 +39,21 @@ $ sys.path.append('C:/Users/kestr/Documents/Projects/Builds/dc/py_realsense_node
 
 --- -->
 
-### 3.3 ^^d.ASH Server Credentials^^
+### 3.2 ^^Setting up Rest Configuration^^
 
-Now, you will need to register your robot by setting up the local credentials for the d.ASH server. To do so, you will need to by run the file:  `setServerPassNative` found in the `registration` folder of the SDK. Run the following command replacing `<username>` with your chosen username and  `<password>` with your chosen password.
+Before you test the d.ASH server, you will need to config the rest server file, [`restConfig.json`](\sdk-config\rest-config) located in the folder `config`. 
 
-```
-$ ./setServerPassNative -u <username> -p <password>
-```
+---
 
-For example, if your username is `user123` and your password is `ilovedASH`, your commands would look like this:
-``` python
-$ ./setServerPassNative -u user123 -p ilovedASH
-```
-
-!!! tip "Username in Robot Configuration"
-    Please ensure that the username for the d.ASH server is the same as the one defined in the robot configuration file - [`robotConfig.json`](/sdk-config/robot-config). For example, you would set `"username" : "<username>"`.
-
---- 
-
-### 3.4 ^^Testing Your Server^^
+### 3.3 ^^Testing Your Server^^
 
 To test your server, you'll firstly need to run the d.ASH server by entering the following command: 
+
+``` python3
+./robot_rest ~/.data/restConfig.json
+```
+
+
 ``` python3
 $ python3.7 ./spotServer.py robotConfig.json
 ```
