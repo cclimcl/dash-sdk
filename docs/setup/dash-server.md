@@ -2,6 +2,8 @@
 
 As mentioned previously, the d.ASH server acts as a secured py-server responsible for sending control commands to the robot and for broadcasting data to any given remote systems. This section of the d.ASH SDK documentation provides details about setting up the d.ASH server. Information in this section includes python requirements, compiling, and testing.
 
+Run https://bitbucket.org/dconstruct/dash_code/src/master/py_server/cython/configLibs.py to install d.ASH server dependencies
+
 ### 3.1 ^^Import Compiled Server^^
 In the file `robotHAL.py`, we need to make sure you are importing the compiled py_server C++ library:
 

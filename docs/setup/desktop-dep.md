@@ -6,7 +6,7 @@ While most of the d.ASH SDK build is hermetic, some system dependencies on the D
 Ubuntu is a complete Linux operating system, which will serve as the primary platform for [ROS](https://ubuntu.com/robotics/what-is-ros). Currently, the d.ASH SDK only supports [Linux Ubuntu 18.04 LTS](http://releases.ubuntu.com/18.04/) for development and simulation from your workstation. 
 
 !!! info "Ubuntu Installation via Bootable USB"
-    If you would like to install Ubuntu via a bootable USB, you can do so for both [Windows](https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview) and [MacOS](https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview).
+    If you would like to install Ubuntu via a bootable USB, you can do so for both [Windows](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/) and [MacOS](https://www.lifewire.com/dual-boot-linux-and-mac-os-4125733).
 
 !!! info "Ubuntu Installation via Virtual Machine"
     If you would like to install Ubuntu via a virtual machine, you can do so using [VirtualBox](https://codingwithmanny.medium.com/installing-ubuntu-18-04-on-mac-os-with-virtualbox-ac3b39678602) to kickstart your installation process.
@@ -31,3 +31,5 @@ Use [Ubuntu to install ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) ont
 $ rosversion -d
 melodic
 ```
+
+- Setting up Rest Configuration

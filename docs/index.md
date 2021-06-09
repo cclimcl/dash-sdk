@@ -21,4 +21,4 @@ The ROS driver is a [ROS node](http://wiki.ros.org/Nodes) that has autonomy func
 
 
 ### d.ASH Autonomy Controller
-The d.ASH Autonomy Controller is the GUI (graphical user interface) for the d.ASH SDK. It encompasses the interactive visual components for d.ASH's software and displays different elements for users to interact with to control your robot.
+The d.ASH autonomy controller is the GUI (graphical user interface) for the d.ASH SDK. It encompasses the interactive visual components for d.ASH's software and displays different elements for users to interact with to control your robot.
