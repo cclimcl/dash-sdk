@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     
       
     
@@ -208,7 +210,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="setup/desktop-dep/index.html" class="md-tabs__link">
+      <a href="setup/desktop-dep/" class="md-tabs__link">
         Setup
       </a>
     </li>
@@ -224,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="getting-started/config-spot/index.html" class="md-tabs__link">
+      <a href="getting-started/config-spot/" class="md-tabs__link">
         Getting Started
       </a>
     </li>
@@ -240,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="sdk-config/rest-config/index.html" class="md-tabs__link">
+      <a href="sdk-config/rest-config/" class="md-tabs__link">
         SDK Configuration
       </a>
     </li>
@@ -438,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/desktop-dep/index.html" class="md-nav__link">
+      <a href="setup/desktop-dep/" class="md-nav__link">
         1.0 Installing Desktop Dependencies
       </a>
     </li>
@@ -450,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/payload-reg/index.html" class="md-nav__link">
+      <a href="setup/payload-reg/" class="md-nav__link">
         2.0 Payload Registration
       </a>
     </li>
@@ -462,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/dash-server/index.html" class="md-nav__link">
+      <a href="setup/dash-server/" class="md-nav__link">
         3.0 Setting up d.ASH Server
       </a>
     </li>
@@ -474,8 +476,20 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/ros-driver/index.html" class="md-nav__link">
-        4.0 Setting up ROS Driver
+      <a href="setup/vpn/" class="md-nav__link">
+        4.0 Setting up d.ASH VPN
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setup/ros-driver/" class="md-nav__link">
+        5.0 Setting up ROS Driver
       </a>
     </li>
   
@@ -516,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/config-spot/index.html" class="md-nav__link">
+      <a href="getting-started/config-spot/" class="md-nav__link">
         1.0 Configuring Spot
       </a>
     </li>
@@ -528,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/config-connect/index.html" class="md-nav__link">
+      <a href="getting-started/config-connect/" class="md-nav__link">
         2.0 Configuring Sensors
       </a>
     </li>
@@ -540,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/UE-client/index.html" class="md-nav__link">
+      <a href="getting-started/UE-client/" class="md-nav__link">
         3.0 d.ASH Autonomy Controller
       </a>
     </li>
@@ -552,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/map-loading/index.html" class="md-nav__link">
+      <a href="getting-started/map-loading/" class="md-nav__link">
         4.0 Map Loading
       </a>
     </li>
@@ -564,20 +578,8 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/localization/index.html" class="md-nav__link">
-        5.0 Localisation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="getting-started/waypoint/index.html" class="md-nav__link">
-        6.0 Waypoint recording and sending
+      <a href="getting-started/waypoint/" class="md-nav__link">
+        5.0 Waypoint recording and sending
       </a>
     </li>
   
@@ -618,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sdk-config/rest-config/index.html" class="md-nav__link">
+      <a href="sdk-config/rest-config/" class="md-nav__link">
         1.0 Rest Configuration
       </a>
     </li>
@@ -630,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sdk-config/robot-config/index.html" class="md-nav__link">
+      <a href="sdk-config/robot-config/" class="md-nav__link">
         2.0 Robot Configuration
       </a>
     </li>
@@ -642,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sdk-config/auto-config/index.html" class="md-nav__link">
+      <a href="sdk-config/auto-config/" class="md-nav__link">
         3.0 Auto Configuration
       </a>
     </li>
@@ -677,7 +679,7 @@
 <li><a href="#ros-driver">ROS Driver</a> </li>
 <li><a href="#dash-autonomy-controller">d.ASH Autonomy Controller</a> </li>
 </ol>
-<p><img alt="Screenshot" src="img/diagram.png" style="width:500px" /></p>
+<p><img alt="Screenshot" class="center" src="img/diagram.png" style="width:550px" /></p>
 <p>If you decide to use your own custom GUI in place of the <a href="#dash-autonomy-controller">d.ASH Autonomy Controller</a>, or you do not want to run autonomy, you will still need to implement the <a href="#dash-server">d.ASH Server</a> and the <a href="#ros-driver">ROS Driver</a> to operate your robot. </p>
 <h3 id="dash-server">d.ASH Server</h3>
 <p>The d.ASH server acts as the main server responsible for sending control commands to the robot. At the same time, the d.ASH server also broadcasts secured data to any given remote systems.</p>
@@ -709,7 +711,7 @@
       
       
         
-        <a href="setup/desktop-dep/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: 1.0 Installing Desktop Dependencies" rel="next">
+        <a href="setup/desktop-dep/" class="md-footer__link md-footer__link--next" aria-label="Next: 1.0 Installing Desktop Dependencies" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">

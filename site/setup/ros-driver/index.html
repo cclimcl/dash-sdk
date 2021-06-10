@@ -18,7 +18,7 @@
     
     
       
-        <title>4.0 Setting up ROS Driver - d.ASH SDK</title>
+        <title>5.0 Setting up ROS Driver - d.ASH SDK</title>
       
     
     
@@ -39,6 +39,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     
       
@@ -102,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.0 Setting up ROS Driver
+              5.0 Setting up ROS Driver
             
           </span>
         </div>
@@ -405,6 +407,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../vpn/" class="md-nav__link">
+        4.0 Setting up d.ASH VPN
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -417,12 +431,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          4.0 Setting up ROS Driver
+          5.0 Setting up ROS Driver
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        4.0 Setting up ROS Driver
+        5.0 Setting up ROS Driver
       </a>
       
         
@@ -463,13 +477,6 @@
         <li class="md-nav__item">
   <a href="#44-running-the-driver" class="md-nav__link">
     4.4 Running the Driver
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#45-building-the-dash-server-on-linux" class="md-nav__link">
-    4.5 Building the d.ASH Server on Linux
   </a>
   
 </li>
@@ -565,20 +572,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/localization/" class="md-nav__link">
-        5.0 Localisation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../getting-started/waypoint/" class="md-nav__link">
-        6.0 Waypoint recording and sending
+        5.0 Waypoint recording and sending
       </a>
     </li>
   
@@ -701,36 +696,14 @@ $ sudo apt-get install libsecret-1-dev
 </code></pre></div>
 <h3 id="43-configuration">4.3 <ins>Configuration</ins></h3>
 <p>Now, we need to place the <code>pyConfig.json</code>  into the folder <code>~/.data</code>. Similarly, make sure security files are stored in the folder <code>~/.data/security/</code>.</p>
-<p>To build the ROS Driver, execute the following commands:
-<div class="highlight"><pre><span></span><code>$ mkdir build
-$ cd build
-$ cmake -DBUILD_SHARED_LIBS=On .. -DCMAKE_TOOLCHAIN_FILE=/home/spot/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=Release   (change path accordingly)
-$ make -j12
-</code></pre></div></p>
 <h3 id="44-running-the-driver">4.4 <ins>Running the Driver</ins></h3>
-<p>By default, token authentication is enabled. To disable it, add <code>auth: false</code> to the <code>pyConfig.json</code>.</p>
-<p>To run without token authentication:
-<div class="highlight"><pre><span></span><code>$ ./ros_msg_interface &lt;!path_to_pyConfig.json&gt;
+<p>Once compiled, run executable SDK to start autonomy driver
+<div class="highlight"><pre><span></span><code>./ros_msg_interface ~/.data/autoConfig.json
 </code></pre></div></p>
-<p>Otherwise, if token authentication is enabled, run
-<div class="highlight"><pre><span></span><code>$ ./ros_msg_interface &lt;!path_to_pyConfig.json&gt; &lt;!TOKEN_HERE&gt;
+<p>Launch to test the sensors - for autonomy need to turn on sensor
+<div class="highlight"><pre><span></span><code>cd launch/
+roslauch # activate sensors 3D scanner
 </code></pre></div></p>
-<h3 id="45-building-the-dash-server-on-linux">4.5 <ins>Building the d.ASH Server on Linux</ins></h3>
-<p>Now, you will need to compile the py_realsense_node C++ library by executing the following:
-<div class="highlight"><pre><span></span><code>$ cmake -DBUILD_SHARED_LIBS=On .. -DCMAKE_TOOLCHAIN_FILE=/home/spot/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=RELEASE
-$ make sure add set(CMAKE_CXX_STANDARD 14) in CMakelists
-$ make
-</code></pre></div>
-Then, you will need to compile the py_server C++ library by executing the following:
-<div class="highlight"><pre><span></span><code>$ cmake -DBUILD_SHARED_LIBS=On .. -DCMAKE_TOOLCHAIN_FILE=/home/spot/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo
-$ make sure add set(CMAKE_CXX_STANDARD 14) in CMakelists
-$ make
-</code></pre></div></p>
-<p>Finally, add the python path correctly by ensuring:</p>
-<ul>
-<li>In robotHAL.py, ensure you are importing the compiled py_server C++ library.</li>
-<li>In realSenseCameras.py, ensure you have compiled the py_realsense_node C++ library. </li>
-</ul>
                 
               
               
@@ -754,7 +727,7 @@ $ make
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../dash-server/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3.0 Setting up d.ASH Server" rel="prev">
+        <a href="../vpn/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4.0 Setting up d.ASH VPN" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -763,7 +736,7 @@ $ make
               <span class="md-footer__direction">
                 Previous
               </span>
-              3.0 Setting up d.ASH Server
+              4.0 Setting up d.ASH VPN
             </div>
           </div>
         </a>

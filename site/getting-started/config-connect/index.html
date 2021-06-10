@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     
       
     
@@ -405,8 +407,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../setup/vpn/" class="md-nav__link">
+        4.0 Setting up d.ASH VPN
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../setup/ros-driver/" class="md-nav__link">
-        4.0 Setting up ROS Driver
+        5.0 Setting up ROS Driver
       </a>
     </li>
   
@@ -584,20 +598,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../localization/" class="md-nav__link">
-        5.0 Localisation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../waypoint/" class="md-nav__link">
-        6.0 Waypoint recording and sending
+        5.0 Waypoint recording and sending
       </a>
     </li>
   
@@ -703,6 +705,25 @@
 <p>By default, the Ouster LIDAR sensor IP address is factory set on your IPv6/IPv4 link-local address. The addresses lie within the block <code>169.254.0.0</code> to <code>169.254.255.255</code>. To change the static IP address for Ouster, refer to the <a href="https://data.ouster.io/downloads/software-user-manual/software-user-manual-v2p0.pdf">Ouster Documentation</a>. It is recommended to set up your own static IP address. </p>
 <h3 id="222-setting-up-on-personal-computer">2.2.2 <ins>Setting Up on Personal Computer</ins></h3>
 <p>You'll need to configure a static IP address for your computer to use an address within the range <code>192.0.2.XXX</code> where <code>XXX</code> may be any integer from 2 to 254. For example, an appropriate static IP address for your compute could be <code>192.0.2.123</code>. </p>
+<p>User need to go into dash_sdk/ROS_Drivers folder and 
+<div class="highlight"><pre><span></span><code>cd ~/dash_SDK/ROS_Drivers/
+catkin_make #compiles the whole thing
+
+echo &quot;source /home/&lt;User&gt;/dash_SDK/ROS_Drivers/devel/setup.bash&quot; &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div></p>
+<p>Testing lidar sensors</p>
+<p>velodine 16
+<div class="highlight"><pre><span></span><code>cd dash_sdk/launch
+roslaunch autonomy_velodine.launch
+</code></pre></div></p>
+<p>Ouster 32
+<div class="highlight"><pre><span></span><code>cd dash_sdk/launch
+roslaunch autonomy_ouster.launch
+</code></pre></div></p>
+<p>to check if the ros messages is published correctly, type this in another terminal
+<div class="highlight"><pre><span></span><code>rostopic echo /velodyne_points
+</code></pre></div></p>
                 
               
               
