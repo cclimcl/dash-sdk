@@ -25,7 +25,7 @@ Ensure login credentials match ...
 
 ### 3.3 ^^Robot Connection^^
 
-The robot connection icon allow users to connect/disconnect their respective robots to the d.ASH autonomy controller.
+The robot connection icon allow users to connect/disconnect their respective robots to the d.ASH autonomy controller. 
 
 ![Screenshot](img/robot-connect.png#center){: style="width:500px" }
 
@@ -35,6 +35,8 @@ The robot connection icon allow users to connect/disconnect their respective rob
 4. ^^Minus button^^: Press to disconnect from a robot in the connected list.
 
 ![Screenshot](img/init.png#center){: style="width:500px" }
+
+When users first start the d.ASH SDK, they need to give an initial estimation of the robot's post on the map.
 
 5. ^^Init pose^^: Tells the robot where its rough initial position is. To draw the arrow: 
       - Click init pose
