@@ -19,3 +19,32 @@ By default, the Ouster LIDAR sensor IP address is factory set on your IPv6/IPv4 
 ### 2.2.2 ^^Setting Up on Personal Computer^^
 
 You'll need to configure a static IP address for your computer to use an address within the range `192.0.2.XXX` where `XXX` may be any integer from 2 to 254. For example, an appropriate static IP address for your compute could be `192.0.2.123`. 
+
+
+User need to go into dash_sdk/ROS_Drivers folder and 
+```
+cd ~/dash_SDK/ROS_Drivers/
+catkin_make #compiles the whole thing
+
+echo "source /home/<User>/dash_SDK/ROS_Drivers/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Testing lidar sensors
+
+velodine 16
+```
+cd dash_sdk/launch
+roslaunch autonomy_velodine.launch
+```
+
+Ouster 32
+```
+cd dash_sdk/launch
+roslaunch autonomy_ouster.launch
+```
+
+to check if the ros messages is published correctly, type this in another terminal
+```
+rostopic echo /velodyne_points
+```

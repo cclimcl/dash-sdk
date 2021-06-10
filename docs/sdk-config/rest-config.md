@@ -11,16 +11,19 @@ This section of the d.ASH SDK documentation provides details about the configura
     "keyFilename" : "./key.pem",
     "dhParamsFilename" : "",
     "robotRegisterNativeCert" : true,
-    "activeIPIdx" : 1,
-    "preferredIP" : "10.8.0.5",
+    "activeIPIdx" : 1, #run runrest to see available IP address
+    "preferredIP" : "10.8.0.5", # computer onboard robot - this has precedence over activeIPIdx
     "runCmds" : {
         "py_server" : {
             "cmdStr" : "python ./spotServer.py ./configs/robotDeployConfig.json <!TOKEN!>",
             "cmdPath" : "C:/Users/kestr/Documents/Projects/dc/dash_code/py_server"
+            # user PATH
         }
     }
 }
 ```
+
+users need to make sure the IP address of com is within the same subnet/reachable by remote clients (establish VPN)
 
 ### 1.2 ^^Definitions^^
 

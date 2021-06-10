@@ -5,23 +5,34 @@ As mentioned previously, the d.ASH autonomy controller is the GUI (graphical use
 ---
 ### 3.1 ^^Main Components^^
 
-![Screenshot](img/main.png){: style="width:500px" }
+<!-- ![Screenshot](img/main.png){: style="width:400px"} -->
+
+![Placeholder](img/main.png){ align=left style="width:350px"}
 
 1. ^^Main toolbar^^: Used to open other menus.
 2. ^^Slider^^: Used to move floor grid up and down.
 3. ^^Access mode^^: Used switch to mouse/keyboard mode.
       - ^^Navigation^^: The default mode uses the keys `WASD` to move camera and right click the mouse to zoom/tilt the camera. 
-       - ^^Waypoint creation^^: Used for adding waypoints to routes.
+      - ^^Waypoint creation^^: Used for adding waypoints to routes.
 4. ^^Floor grid^^
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 
 ### 3.2 ^^Login^^
 
+![Screenshot](img/login.png#center){ align=left style="width:350px"}
+
 The login icon allow dConstruct users to log into the d.ASH autonomy controller using their cloud admin credentials.
 
-
-![Screenshot](img/login.png#center){: style="width:500px" }
-
-Ensure login credentials match ...
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 ### 3.3 ^^Robot Connection^^
 

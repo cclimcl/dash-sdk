@@ -9,7 +9,7 @@ There are 3 main components encompassing the d.ASH SDK:
 2. [ROS Driver](#ros-driver) 
 3. [d.ASH Autonomy Controller](#dash-autonomy-controller) 
 
-![Screenshot](img/diagram.png){: style="width:500px" }
+![Screenshot](img/diagram.png){: .center style="width:550px" }
 
 If you decide to use your own custom GUI in place of the [d.ASH Autonomy Controller](#dash-autonomy-controller), or you do not want to run autonomy, you will still need to implement the [d.ASH Server](#dash-server) and the [ROS Driver](#ros-driver) to operate your robot. 
 

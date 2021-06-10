@@ -45,43 +45,15 @@ $ sudo apt-get install libsecret-1-dev
 ### 4.3 ^^Configuration^^
 Now, we need to place the `pyConfig.json`  into the folder `~/.data`. Similarly, make sure security files are stored in the folder `~/.data/security/`.
 
-To build the ROS Driver, execute the following commands:
-``` 
-$ mkdir build
-$ cd build
-$ cmake -DBUILD_SHARED_LIBS=On .. -DCMAKE_TOOLCHAIN_FILE=/home/spot/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=Release   (change path accordingly)
-$ make -j12
-```
   
 ### 4.4 ^^Running the Driver^^
-By default, token authentication is enabled. To disable it, add `auth: false` to the `pyConfig.json`.
-
-To run without token authentication:
+Once compiled, run executable SDK to start autonomy driver
 ```
-$ ./ros_msg_interface <!path_to_pyConfig.json>
+./ros_msg_interface ~/.data/autoConfig.json
 ```
 
-Otherwise, if token authentication is enabled, run
+Launch to test the sensors - for autonomy need to turn on sensor
 ```
-$ ./ros_msg_interface <!path_to_pyConfig.json> <!TOKEN_HERE>
+cd launch/
+roslauch # activate sensors 3D scanner
 ```
-
-### 4.5 ^^Building the d.ASH Server on Linux^^
-
-Now, you will need to compile the py_realsense_node C++ library by executing the following:
-```
-$ cmake -DBUILD_SHARED_LIBS=On .. -DCMAKE_TOOLCHAIN_FILE=/home/spot/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=RELEASE
-$ make sure add set(CMAKE_CXX_STANDARD 14) in CMakelists
-$ make
-```
-Then, you will need to compile the py_server C++ library by executing the following:
-```
-$ cmake -DBUILD_SHARED_LIBS=On .. -DCMAKE_TOOLCHAIN_FILE=/home/spot/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo
-$ make sure add set(CMAKE_CXX_STANDARD 14) in CMakelists
-$ make
-```
-
-Finally, add the python path correctly by ensuring:
-
-- In robotHAL.py, ensure you are importing the compiled py_server C++ library.
-- In realSenseCameras.py, ensure you have compiled the py_realsense_node C++ library. 
