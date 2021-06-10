@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     
       
     
@@ -474,8 +476,20 @@
   
   
     <li class="md-nav__item">
+      <a href="setup/vpn/" class="md-nav__link">
+        4.0 Setting up d.ASH VPN
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="setup/ros-driver/" class="md-nav__link">
-        4.0 Setting up ROS Driver
+        5.0 Setting up ROS Driver
       </a>
     </li>
   
@@ -564,20 +578,8 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/localization/" class="md-nav__link">
-        5.0 Localisation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="getting-started/waypoint/" class="md-nav__link">
-        6.0 Waypoint recording and sending
+        5.0 Waypoint recording and sending
       </a>
     </li>
   
@@ -677,7 +679,7 @@
 <li><a href="#ros-driver">ROS Driver</a> </li>
 <li><a href="#dash-autonomy-controller">d.ASH Autonomy Controller</a> </li>
 </ol>
-<p><img alt="Screenshot" src="img/diagram.png" style="width:500px" /></p>
+<p><img alt="Screenshot" class="center" src="img/diagram.png" style="width:550px" /></p>
 <p>If you decide to use your own custom GUI in place of the <a href="#dash-autonomy-controller">d.ASH Autonomy Controller</a>, or you do not want to run autonomy, you will still need to implement the <a href="#dash-server">d.ASH Server</a> and the <a href="#ros-driver">ROS Driver</a> to operate your robot. </p>
 <h3 id="dash-server">d.ASH Server</h3>
 <p>The d.ASH server acts as the main server responsible for sending control commands to the robot. At the same time, the d.ASH server also broadcasts secured data to any given remote systems.</p>

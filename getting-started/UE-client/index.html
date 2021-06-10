@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     
       
     
@@ -405,8 +407,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../setup/vpn/" class="md-nav__link">
+        4.0 Setting up d.ASH VPN
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../setup/ros-driver/" class="md-nav__link">
-        4.0 Setting up ROS Driver
+        5.0 Setting up ROS Driver
       </a>
     </li>
   
@@ -599,20 +613,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../localization/" class="md-nav__link">
-        5.0 Localisation
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../waypoint/" class="md-nav__link">
-        6.0 Waypoint recording and sending
+        5.0 Waypoint recording and sending
       </a>
     </li>
   
@@ -707,7 +709,11 @@
 <p>As mentioned previously, the d.ASH autonomy controller is the GUI (graphical user interface) for the d.ASH SDK. It encompasses the interactive visual components for d.ASH's software and displays different elements for users to interact with to control your robot. This section of the d.ASH SDK documentation provides details about setting up the d.ASH autonomy controller, including information on its respective components.</p>
 <hr />
 <h3 id="31-main-components">3.1 <ins>Main Components</ins></h3>
-<p><img alt="Screenshot" src="../img/main.png" style="width:500px" /></p>
+<!-- ![Screenshot](img/main.png){: style="width:400px"} -->
+
+<p><img align="left" alt="Placeholder" src="../img/main.png" style="width:350px" /></p>
+<p>&nbsp;</p>
+
 <ol>
 <li><ins>Main toolbar</ins>: Used to open other menus.</li>
 <li><ins>Slider</ins>: Used to move floor grid up and down.</li>
@@ -718,36 +724,42 @@
 </li>
 <li><ins>Floor grid</ins></li>
 </ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
 <h3 id="32-login">3.2 <ins>Login</ins></h3>
+<p><img align="left" alt="Screenshot" src="../img/login.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>The login icon allow dConstruct users to log into the d.ASH autonomy controller using their cloud admin credentials.</p>
-<p><img alt="Screenshot" src="../img/login.png#center" style="width:500px" /></p>
-<p>Ensure login credentials match ...</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
 <h3 id="33-robot-connection">3.3 <ins>Robot Connection</ins></h3>
-<p>The robot connection icon allow users to connect/disconnect their respective robots to the d.ASH autonomy controller.</p>
-<p><img alt="Screenshot" src="../img/robot-connect.png#center" style="width:500px" /></p>
+<p>The robot connection icon allow users to connect/disconnect their respective robots to the d.ASH autonomy controller. </p>
+<p><img align="left" alt="Screenshot" src="../img/robot-connect.png#center" style="width:350px" /></p>
 <ol>
 <li><ins>Online pannel</ins>: Select from a list of robots that are online and ready to be used to connect to.</li>
 <li><ins>Connected pannel</ins>: Select from a list of robots that you have connected to in the client to manipulate.</li>
 <li><ins>Add button</ins>: Press to connect to the robot selected in the online list to add the robot to the connected list.</li>
 <li><ins>Minus button</ins>: Press to disconnect from a robot in the connected list.</li>
 </ol>
-<p><img alt="Screenshot" src="../img/init.png#center" style="width:500px" /></p>
-<ol>
-<li><ins>Init pose</ins>: Tells the robot where its rough initial position is. To draw the arrow: <ul>
-<li>Click init pose</li>
-<li>Left click and drag the mouse on the grid</li>
-</ul>
-</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Follow</p>
-<p>Toggle on to have the camera follow the selected dog.</p>
-</div>
+<p>&nbsp;</p>
+
+<p><img align="left" alt="Screenshot" src="../img/init.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>When users first start the d.ASH SDK, they need to give an initial estimation of the robot's post on the map by configuring its <code>init pose</code>. </p>
+<p>It tells the robot where its rough initial position is. To initialize <code>init pose</code>, draw the orange arrow by left clicking and drag the mouse on the floor grid.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <hr />
 <h3 id="34-routes">3.4 <ins>Routes</ins></h3>
 <p>The routes icon allow users to set routes for the robot to follow using waypoints. Add/remove waypoints to build your own custom routes.</p>
 <h4 id="341-route-controls">3.4.1 Route Controls</h4>
-<p><img alt="Screenshot" src="../img/routes.png#center" style="width:500px" /></p>
+<p><img align="left" alt="Screenshot" src="../img/routes.png#center" style="width:350px" /></p>
 <ol>
 <li><ins>Route name pannel</ins>: Enter route name to add.</li>
 <li><ins>Add button</ins>: Click to add route of given name.</li>
@@ -757,34 +769,79 @@
 <li><ins>Load/save button</ins>: Load/save all routes.</li>
 <li><ins>Segment pannel</ins>: Use keypad &plusmn; to increment/decrement segment number.</li>
 </ol>
+<p>&nbsp;</p>
+<hr />
 <h4 id="341-setting-up-routes">3.4.1 Setting Up Routes</h4>
+<p><img align="left" alt="Screenshot" src="../img/waypoint-1.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>To make a selected robot follow a selected route, add waypoints by clicking on the grid. Use <code>WASD</code> and right-click on the mouse to manipulate the view.</p>
-<p><img alt="Screenshot" src="../img/waypoint-1.png#center" style="width:500px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
+<p><img align="left" alt="Screenshot" src="../img/waypoint-2.png#center" style="width:350px" /></p>
+<p><img alt="Screenshot" src="../img/waypoint-3.png#center" style="width:310px" /></p>
 <p>Once the waypoints have been set, exit waypoint mode by middle clicking the mouse. On the other hand, to remove a waypoint, click on the waypoint (selected waypoint change to the color orange), and press the <code>delete</code> ket to remove.</p>
-<p><img alt="Screenshot" src="../img/waypoint-2.png#center" style="width:500px" /></p>
-<p><img alt="Screenshot" src="../img/waypoint-3.png#center" style="width:500px" /></p>
+<p><img align="left" alt="Screenshot" src="../img/waypoint-4.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
 <p>You can also adjust the elevation of the grid by pressing the key <code>ctrl</code> and the mouse scroll moving the floor grid in waypoint mode. A waypoint is created when you click on grid, so, to create elevated waypoints, move grid up/down and then click.</p>
-<p><img alt="Screenshot" src="../img/waypoint-4.png#center" style="width:500px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
 <h3 id="35-map-settings">3.5 <ins>Map Settings</ins></h3>
-<p>The map settings icon allow users to adjust highpass, lowpass, UV Scale, and UV offset settings to customise the visuals of your map/</p>
-<p><img alt="Screenshot" src="../img/map.png#center" style="width:500px" /></p>
+<p>The map settings icon allow users to adjust highpass, lowpass, UV Scale, and UV offset settings to customise the visuals of your map.</p>
+<p><img align="left" alt="Screenshot" src="../img/map.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 <ol>
 <li><ins>Low pass slider</ins>: Voxels below this value is visible. Voxels in maps have elevation, and by lowering the low pass, voxels above the low pass will be cropped.</li>
 </ol>
-<p><img alt="Screenshot" src="../img/map-2.png#center" style="width:500px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><img align="left" alt="Screenshot" src="../img/map-2.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>Notice that the ceiling voxels have now been cropped by reducing the low pass.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
 <h3 id="36-layer-visibility">3.6 <ins>Layer Visibility</ins></h3>
+<p><img align="left" alt="Screenshot" src="../img/layer.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>The layer visibility icon allow users to toggle the visibility of various items on the map.</p>
-<p><img alt="Screenshot" src="../img/layer.png#center" style="width:500px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
 <h3 id="37-load-scans">3.7 <ins>Load Scans</ins></h3>
 <p>The load scans icon allow users to preview scans from the d.ASH Pack.</p>
-<p><img alt="Screenshot" src="../img/load-scan.png#center" style="width:500px" /></p>
+<p><img align="left" alt="Screenshot" src="../img/load-scan.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <ol>
 <li><ins>Vox downsample size pannel</ins>: Select your down sample size (in metres). A large value means lower quality, but faster loading.</li>
 <li><ins>Point clouds button</ins>: Pick loaded point clouds to toggle translucency.</li>
 </ol>
-<p><img alt="Screenshot" src="../img/load-scan-2.png#center" style="width:500px" /></p>
-<p>Translucent mode.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><img align="left" alt="Screenshot" src="../img/load-scan-2.png#center" style="width:350px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Load scans in translucent mode.</p>
                 
               
               
