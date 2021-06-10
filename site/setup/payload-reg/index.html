@@ -240,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../sdk-config/robot-config/" class="md-tabs__link">
+      <a href="../../sdk-config/rest-config/" class="md-tabs__link">
         SDK Configuration
       </a>
     </li>
@@ -423,8 +423,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#22-ros-driver-credentials" class="md-nav__link">
-    2.2 ROS Driver Credentials
+  <a href="#22-robot-registration" class="md-nav__link">
+    2.2 Robot Registration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-ros-driver-credentials" class="md-nav__link">
+    2.3 ROS Driver Credentials
   </a>
   
 </li>
@@ -521,7 +528,7 @@
   
     <li class="md-nav__item">
       <a href="../../getting-started/UE-client/" class="md-nav__link">
-        3.0 Setting up d.ASH Autonomy Controller
+        3.0 d.ASH Autonomy Controller
       </a>
     </li>
   
@@ -598,8 +605,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../sdk-config/rest-config/" class="md-nav__link">
+        1.0 Rest Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../sdk-config/robot-config/" class="md-nav__link">
-        1.0 Robot Configuration
+        2.0 Robot Configuration
       </a>
     </li>
   
@@ -611,7 +630,7 @@
   
     <li class="md-nav__item">
       <a href="../../sdk-config/auto-config/" class="md-nav__link">
-        2.0 Auto Configuration
+        3.0 Auto Configuration
       </a>
     </li>
   
@@ -637,7 +656,7 @@
                 
                 
                 <h1 id="payload-registration">Payload Registration</h1>
-<p>Before running the d.ASH SDK, please make sure your all your credentials have been set up correctly. This means using the right username and the right password. This section of the d.ASH SDK documentation provides details about setting up credentials for the d.ASH SDK. Information in this section includes the d.ASH server and the ROS driver credentials setup.</p>
+<p>Before running the d.ASH SDK, please make sure your all your credentials have been set up correctly. This means using the right username and the right password. This section of the d.ASH SDK documentation provides details about setting up credentials for the d.ASH SDK. Information in this section includes the d.ASH server and the ROS driver credentials setup. Files will be found in the folder <code>registration</code> under the SDK.</p>
 <h3 id="21-dash-server-credentials">2.1 <ins>d.ASH Server Credentials</ins></h3>
 <p>To set up the local credentials for the d.ASH server, you will need to by run the file:  <code>setServerPassNative</code>. Run the following command replacing <code>&lt;username&gt;</code> with your chosen username and  <code>&lt;password&gt;</code> with your chosen password.</p>
 <div class="highlight"><pre><span></span><code>$ ./setServerPassNative -u &lt;username&gt; -p &lt;password&gt;
@@ -650,15 +669,28 @@
 <p>Please ensure that the username for the d.ASH server is the same as the one defined in the robot configuration file - <a href="/sdk-config/robot-config"><code>robotConfig.json</code></a>. For example, you would set <code>"username" : "&lt;username&gt;"</code>.</p>
 </div>
 <hr />
-<h3 id="22-ros-driver-credentials">2.2 <ins>ROS Driver Credentials</ins></h3>
-<p>To set up the local credentials for the ROS driver, you will need to by run the file:  <code>setAutonomyCred</code>. Run the following command replacing <code>&lt;username&gt;</code> with your chosen username and  <code>&lt;password&gt;</code> with your chosen password. </p>
-<p><div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">cd</span> <span class="o">./</span><span class="n">setAutoCred</span><span class="o">/</span><span class="n">build</span>
-<span class="err">$</span> <span class="o">./</span><span class="n">setAutonomyCred</span> <span class="o">-</span><span class="n">u</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span> 
+<h3 id="22-robot-registration">2.2 <ins>Robot Registration</ins></h3>
+<p>To register the payload computer with d.ASH's backend system, you will need to by run the file:  <code>register_bot_native</code>. However, you will first need to configure the <code>registerBot.json</code> found in the <code>config</code> folder of the SDK. Set <code>&lt;robot_name&gt;</code> to any name you like, and set <code>&lt;robot _username&gt;</code> to your dConstruct cloud admin username. </p>
+<p>For example, if your robot name is <code>robot1</code> and your cloud admin user name is <code>user123</code>, your <code>registerBot.json</code> would look like this:</p>
+<div class="highlight"><pre><span></span><code>{
+    RobotName: robot1,
+    RobotUserName: user123
+}
 </code></pre></div>
-For example, if your username is <code>user123</code> and your password is <code>ilovedASH</code>, your commands would look like this:
-<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">cd</span> <span class="o">./</span><span class="n">setAutoCred</span><span class="o">/</span><span class="n">build</span>
-<span class="err">$</span> <span class="o">./</span><span class="n">setAutonomyCred</span> <span class="o">-</span><span class="n">u</span> <span class="n">user123</span> <span class="o">-</span><span class="n">p</span> <span class="n">ilovedASH</span> 
-</code></pre></div></p>
+<p>Now, run the following command to register your robot: </p>
+<div class="highlight"><pre><span></span><code>register_bot_native -i ../config/registerBot.json
+</code></pre></div>
+<hr />
+<h3 id="23-ros-driver-credentials">2.3 <ins>ROS Driver Credentials</ins></h3>
+<p>To set up the local credentials for the ROS driver, you will need to by run the file:  <code>setAutonomyCred</code>. Run the following command replacing <code>&lt;username&gt;</code> with your cloud admin username and  <code>&lt;password&gt;</code> with your cloud admin password. </p>
+<p><div class="highlight"><pre><span></span><code><span class="n">cd</span> <span class="o">./</span><span class="n">setAutoCred</span><span class="o">/</span><span class="n">build</span>
+<span class="o">./</span><span class="n">setAutonomyCred</span> <span class="o">-</span><span class="n">u</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span> 
+</code></pre></div>
+For example, if your username is <code>user123</code>, your command would look like this:
+<div class="highlight"><pre><span></span><code><span class="n">cd</span> <span class="o">./</span><span class="n">setAutoCred</span><span class="o">/</span><span class="n">build</span>
+<span class="o">./</span><span class="n">setAutonomyCred</span> <span class="o">-</span><span class="n">u</span> <span class="n">user123</span> <span class="o">-</span><span class="n">p</span> <span class="n">ilovedASH</span> 
+</code></pre></div>
+You will then be prompted to enter a <password>. This <password> will match your cloud admin password.</p>
                 
               
               

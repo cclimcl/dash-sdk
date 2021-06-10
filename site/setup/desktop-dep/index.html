@@ -240,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../sdk-config/robot-config/" class="md-tabs__link">
+      <a href="../../sdk-config/rest-config/" class="md-tabs__link">
         SDK Configuration
       </a>
     </li>
@@ -417,6 +417,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#13-intel-realsense-sdk-installation" class="md-nav__link">
+    1.3 Intel RealSense SDK Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-ffmpeg-installation" class="md-nav__link">
+    1.4 FFmpeg Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-python-requirements" class="md-nav__link">
+    1.5 Python Requirements
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Python Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-pip-installation" class="md-nav__link">
+    1.5.1 Pip Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-conda-installation" class="md-nav__link">
+    1.5.2 Conda Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-apt-get" class="md-nav__link">
+    1.5.3 apt-get
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -521,7 +569,7 @@
   
     <li class="md-nav__item">
       <a href="../../getting-started/UE-client/" class="md-nav__link">
-        3.0 Setting up d.ASH Autonomy Controller
+        3.0 d.ASH Autonomy Controller
       </a>
     </li>
   
@@ -598,8 +646,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../sdk-config/rest-config/" class="md-nav__link">
+        1.0 Rest Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../sdk-config/robot-config/" class="md-nav__link">
-        1.0 Robot Configuration
+        2.0 Robot Configuration
       </a>
     </li>
   
@@ -611,7 +671,7 @@
   
     <li class="md-nav__item">
       <a href="../../sdk-config/auto-config/" class="md-nav__link">
-        2.0 Auto Configuration
+        3.0 Auto Configuration
       </a>
     </li>
   
@@ -637,7 +697,13 @@
                 
                 
                 <h1 id="installing-dependencies-on-the-desktop">Installing Dependencies on the Desktop</h1>
-<p>While most of the d.ASH SDK build is hermetic, some system dependencies on the Desktop are required -  <strong>Linux Ubuntu 18.04 LTS</strong> and <strong>ROS Melodic</strong>. This section of the d.ASH SDK documentation provides details for both Ubuntu and ROS Melodic installations.</p>
+<p>While most of the d.ASH SDK build is hermetic, some system dependencies on the Desktop are required. This section of the d.ASH SDK documentation provides details for Intel RealSense SDK, Ubuntu, ROS Melodic, and FFmpeg installations.</p>
+<p>Firstly, the following desktop dependencies must be set up prior to installing the appropriate libraries for the d.ASH server:</p>
+<ol>
+<li><a href="/setup/desktop-dep/#12-ros-installation">ROS Melodic on Ubuntu 18.04</a></li>
+<li><a href="https://github.com/IntelRealSense/librealsense/releases/tag/v2.45.0">Intel RealSense SDK 2.0</a></li>
+<li><a href="https://www.ffmpeg.org/download.html">FFmpeg</a></li>
+</ol>
 <h3 id="11-ubuntu-installation">1.1 <ins>Ubuntu Installation</ins></h3>
 <p>Ubuntu is a complete Linux operating system, which will serve as the primary platform for <a href="https://ubuntu.com/robotics/what-is-ros">ROS</a>. Currently, the d.ASH SDK only supports <a href="http://releases.ubuntu.com/18.04/">Linux Ubuntu 18.04 LTS</a> for development and simulation from your workstation. </p>
 <div class="admonition info">
@@ -659,10 +725,38 @@
 <hr />
 <h3 id="12-ros-installation">1.2 <ins>ROS Installation</ins></h3>
 <p><a href="https://ubuntu.com/robotics/what-is-ros">ROS</a> (Robot Operating System) is a open-source framework that helps researchers and developers build and reuse code between robotics applications. Currently, the d.ASH SDK only supports ROS Melodic for development and simulation from your workstation. </p>
-<p>Use <a href="http://wiki.ros.org/melodic/Installation/Ubuntu">Ubuntu to install ROS</a> onto your computer system. Once ROS has been installed on your Linux system, check that your version of ROS is <code>melodic</code>.  Open the terminal and type the command:</p>
+<p>Use <a href="http://wiki.ros.org/melodic/Installation/Ubuntu">Ubuntu to install ROS melodic</a> onto your computer system. Once ROS has been installed on your Linux system, check that your version of ROS is <code>melodic</code>.  Open the terminal and type the command:</p>
 <div class="highlight"><pre><span></span><code>$ rosversion -d
 melodic
 </code></pre></div>
+<h3 id="13-intel-realsense-sdk-installation">1.3 <ins>Intel RealSense SDK Installation</ins></h3>
+<p><a href="https://www.intelrealsense.com/">Intel RealSense</a> is an RGB camera with channels designed for depth perception capabilities. The <a href="https://www.intelrealsense.com/sdk-2/">RealSense SDK 2.0</a> provides installation packages for Intel X86/AMD64-based Debian distributions in <code>dpkg</code> format for Ubuntu 16/18/20 LTS. Then, you'll be able to configure custom settings for any Intel RealSense cameras attached to the system to stream images to remote clients. </p>
+<p>Use <a href="https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md">Ubuntu to install Intel RealSense SDK 2.0</a> onto your computer system.</p>
+<h3 id="14-ffmpeg-installation">1.4 <ins>FFmpeg Installation</ins></h3>
+<p><a href="https://www.ffmpeg.org/">FFmpeg</a> is an open-source software project consisting of libraries and programs that handle video, audio, and other multimedia files and streams.</p>
+<p>To install FFmpeg, run the following commands:
+<div class="highlight"><pre><span></span><code>$ sudo add-apt-repository ppa:jonathonf/ffmpeg-4
+$ sudo apt-get install ffmpeg libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavresample-dev libavutil-dev libpostproc-dev libswresample-dev libswscale-dev libgoogle-glog-dev
+</code></pre></div></p>
+<h3 id="15-python-requirements">1.5 <ins>Python Requirements</ins></h3>
+<p>The d.ASH SDK works with <a href="https://www.python.org/downloads/release/python-370/">Python 3.7</a>. To properly run the server, you will also need to install a python package installer and a python environment management system.</p>
+<hr />
+<h4 id="151-pip-installation">1.5.1 Pip Installation</h4>
+<p><a href="https://pip.pypa.io/en/stable/installing/">Pip</a> is a package installer for Python. The d.ASH SDK and the third-party packages used by many of its programming examples use pip to install. To install pip, run the following command on Ubuntu:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="mf">.7</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">instal</span> <span class="o">--</span> <span class="n">upgrade</span> <span class="n">pip</span>
+</code></pre></div>
+It is recommended that you install an environment for Python. There are two ways to set up the Python 3.7 environment: via Conda or <code>apt-get</code>. </p>
+<hr />
+<h4 id="152-conda-installation">1.5.2 Conda Installation</h4>
+<p>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. First, install <a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation">Conda</a>. Then, to set up the new environment, execute the following command: 
+<div class="highlight"><pre><span></span><code>$ conda create --name py37 python=3.7
+</code></pre></div></p>
+<h4 id="153-apt-get">1.5.3 apt-get</h4>
+<p>If Conda is not installed, you can choose to use <code>apt-get</code> to an environment for Python. Installed in Ubuntu and any Ubuntu-based Linux distribution, <code>apt-get</code> is tool for installing, upgrading, and cleaning packages. To set up the new environment, execute the following command:
+<div class="highlight"><pre><span></span><code>$ sudo apt-get install -y python3.7-dev
+</code></pre></div></p>
+<hr />
                 
               
               

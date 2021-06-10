@@ -240,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../sdk-config/robot-config/" class="md-tabs__link">
+      <a href="../../sdk-config/rest-config/" class="md-tabs__link">
         SDK Configuration
       </a>
     </li>
@@ -428,56 +428,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#31-import-compiled-server" class="md-nav__link">
-    3.1 Import Compiled Server
+  <a href="#31-installing-dash-server-dependencies" class="md-nav__link">
+    3.1 Installing d.ASH Server Dependencies
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#32-python-requirements" class="md-nav__link">
-    3.2 Python Requirements
-  </a>
-  
-    <nav class="md-nav" aria-label="3.2 Python Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#321-pip-installation" class="md-nav__link">
-    3.2.1 Pip Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#322-conda-installation" class="md-nav__link">
-    3.2.2 Conda Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#323-apt-get" class="md-nav__link">
-    3.2.3 apt-get
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#33-intel-realsense" class="md-nav__link">
-    3.3 Intel RealSense
+  <a href="#32-setting-up-rest-configuration" class="md-nav__link">
+    3.2 Setting up Rest Configuration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#34-testing-your-server" class="md-nav__link">
-    3.4 Testing Your Server
+  <a href="#33-testing-your-server" class="md-nav__link">
+    3.3 Testing Your Server
   </a>
   
 </li>
@@ -562,7 +528,7 @@
   
     <li class="md-nav__item">
       <a href="../../getting-started/UE-client/" class="md-nav__link">
-        3.0 Setting up d.ASH Autonomy Controller
+        3.0 d.ASH Autonomy Controller
       </a>
     </li>
   
@@ -639,8 +605,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../sdk-config/rest-config/" class="md-nav__link">
+        1.0 Rest Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../sdk-config/robot-config/" class="md-nav__link">
-        1.0 Robot Configuration
+        2.0 Robot Configuration
       </a>
     </li>
   
@@ -652,7 +630,7 @@
   
     <li class="md-nav__item">
       <a href="../../sdk-config/auto-config/" class="md-nav__link">
-        2.0 Auto Configuration
+        3.0 Auto Configuration
       </a>
     </li>
   
@@ -678,53 +656,48 @@
                 
                 
                 <h1 id="setting-up-dash-server">Setting Up d.ASH Server</h1>
-<p>As mentioned previously, the d.ASH server acts as a secured py-server responsible for sending control commands to the robot and for broadcasting data to any given remote systems. This section of the d.ASH SDK documentation provides details about setting up the d.ASH server. Information in this section includes python requirements, compiling, and testing.</p>
-<p>Run https://bitbucket.org/dconstruct/dash_code/src/master/py_server/cython/configLibs.py to install d.ASH server dependencies</p>
-<h3 id="31-import-compiled-server">3.1 <ins>Import Compiled Server</ins></h3>
-<p>In the file <code>robotHAL.py</code>, we need to make sure you are importing the compiled py_server C++ library:</p>
+<p>As mentioned previously, the d.ASH server acts as a secured py-server responsible for sending control commands to the robot and for broadcasting data to any given remote systems. This section of the d.ASH SDK documentation provides details about setting up the d.ASH server. Information in this section includes compiling, and testing.</p>
+<h3 id="31-installing-dash-server-dependencies">3.1 <ins>Installing d.ASH Server Dependencies</ins></h3>
+<p>To install the d.ASH server dependencies using pip, the following <a href="/setup/desktop-dep">desktop dependencies</a> must be set up prior:</p>
+<ol>
+<li><a href="https://github.com/IntelRealSense/librealsense/releases/tag/v2.45.0">Intel RealSense SDK 2.0</a></li>
+<li><a href="/setup/desktop-dep/#12-ros-installation">ROS Melodic on Ubuntu 18.04</a></li>
+<li><a href="https://www.ffmpeg.org/download.html">FFmpeg</a></li>
+</ol>
+<p>If the above dependencies have been installed, proceed by running the following command to install the rest of the python packages:
+<div class="highlight"><pre><span></span><code>python3.7 configLibs.py
+</code></pre></div></p>
+<hr />
+<!-- ### 3.1 ^^Import Compiled Server^^
+In the file `robotHAL.py`, we need to make sure you are importing the compiled py_server C++ library:
+
 <div class="highlight"><pre><span></span><code><span class="c1"># sys.path.append(&#39;G:/Builds/testPyServer_Build/RelWithDebInfo&#39;)</span>
 <span class="err">$</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;C:/Users/kestr/Documents/Projects/Builds/dc/py_server_build/RelWithDebInfo&#39;</span><span class="p">)</span> 
 <span class="c1"># Change this to your built path</span>
 </code></pre></div>
-<p>Now, in <code>realSenseCameras.py</code>, we need to make sure you have also compiled the py_realsense_node C++ library:</p>
+
+Now, in `realSenseCameras.py`, we need to make sure you have also compiled the py_realsense_node C++ library:
+
 <div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;C:/Users/kestr/Documents/Projects/Builds/dc/py_realsense_node_build/RelWithDebInfo&#39;</span><span class="p">)</span> <span class="c1"># Change this to your built path</span>
 </code></pre></div>
+
+--- -->
+
+<!-- ### 3.3 ^^Intel RealSense^^
+
+[Intel RealSense](https://www.intelrealsense.com/) is an RGB camera with channels designed for depth perception capabilities. You can configure custom settings for any Intel RealSense cameras attached to the system to stream images to remote clients. You can do so by providing a config file in the same folder as where you launched d.ASH server. The config file needs to be named as [`realSenseConfig.json`](/sdk-config/realsense). 
+
+--- -->
+
+<h3 id="32-setting-up-rest-configuration">3.2 <ins>Setting up Rest Configuration</ins></h3>
+<p>Before you test the d.ASH server, you will need to config the rest server file, <a href="\sdk-config\rest-config"><code>restConfig.json</code></a> located in the folder <code>config</code>. </p>
 <hr />
-<h3 id="32-python-requirements">3.2 <ins>Python Requirements</ins></h3>
-<p>The d.ASH SDK works with <a href="https://www.python.org/downloads/release/python-370/">Python 3.7</a>. To properly run the server, you will also need to install the following dependencies - a python package installer and a python environment management system.</p>
-<hr />
-<h4 id="321-pip-installation">3.2.1 Pip Installation</h4>
-<p><a href="https://pip.pypa.io/en/stable/installing/">Pip</a> is a package installer for Python. The d.ASH SDK and the third-party packages used by many of its programming examples use pip to install. 
-Check if pip is installed by requesting its version:
-<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
-<span class="n">pip</span> <span class="mf">19.2.1</span> <span class="kn">from</span> <span class="o">&lt;</span><span class="n">PATH_ON_YOUR_COMPUTER</span><span class="o">&gt;</span>
-</code></pre></div></p>
-<p>If pip is not found, you’ll need to install <a href="https://pip.pypa.io/en/stable/installing/">pip</a>. Otherwise, install the following packages using pip:</p>
-<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pillow</span>
-<span class="err">$</span> <span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span>
-<span class="err">$</span> <span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">bosdyn</span><span class="o">-</span><span class="n">client</span> <span class="n">bosdyn</span><span class="o">-</span><span class="n">mission</span> <span class="n">bosdyn</span><span class="o">-</span><span class="n">choreography</span><span class="o">-</span><span class="n">client</span>
-<span class="err">$</span> <span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">keyring</span>
-<span class="err">$</span> <span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">secretstorage</span>
-<span class="err">$</span> <span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">keyrings</span><span class="o">.</span><span class="n">alt</span>
+<h3 id="33-testing-your-server">3.3 <ins>Testing Your Server</ins></h3>
+<p>To test your server, you'll firstly need to run the d.ASH server by entering the following command: </p>
+<div class="highlight"><pre><span></span><code><span class="o">./</span><span class="n">robot_rest</span> <span class="o">~/.</span><span class="n">data</span><span class="o">/</span><span class="n">restConfig</span><span class="o">.</span><span class="n">json</span>
 </code></pre></div>
-<p>It is recommended that you install an environment for Python. There are two ways to set up the Python 3.7 environment: via Conda or <code>apt-get</code>. </p>
-<hr />
-<h4 id="322-conda-installation">3.2.2 Conda Installation</h4>
-<p>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. First, install <a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation">Conda</a>. Then, to set up the new environment, execute the following command: 
-<div class="highlight"><pre><span></span><code>$ conda create --name py37 python=3.7
-</code></pre></div></p>
-<h4 id="323-apt-get">3.2.3 apt-get</h4>
-<p>If Conda is not installed, you can choose to use <code>apt-get</code> to an environment for Python. Installed in Ubuntu and any Ubuntu-based Linux distribution, <code>apt-get</code> is tool for installing, upgrading, and cleaning packages. To set up the new environment, execute the following command:
-<div class="highlight"><pre><span></span><code>$ sudo apt-get install -y python3.7-dev
-</code></pre></div></p>
-<hr />
-<h3 id="33-intel-realsense">3.3 <ins>Intel RealSense</ins></h3>
-<p><a href="https://www.intelrealsense.com/">Intel RealSense</a> is an RGB camera with channels designed for depth perception capabilities. You can configure custom settings for any Intel RealSense cameras attached to the system to stream images to remote clients. You can do so by providing a config file in the same folder as where you launched d.ASH server. The config file needs to be named as <a href="/sdk-config/realsense"><code>realSenseConfig.json</code></a>. </p>
-<hr />
-<h3 id="34-testing-your-server">3.4 <ins>Testing Your Server</ins></h3>
-<p>To test your server, you'll firstly need to run the d.ASH server by entering the following command: 
 <div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">python3</span><span class="mf">.7</span> <span class="o">./</span><span class="n">spotServer</span><span class="o">.</span><span class="n">py</span> <span class="n">robotConfig</span><span class="o">.</span><span class="n">json</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Now that your d.ASH server is running, you will need to connect the server with the <code>pilot_client</code>. This will allow any available cameras to show up as options on your screen. To connect to the pilot client, ...</p>
 <p>Finally, try switching to the test camera streaming and verify the test camera is streaming properly.</p>
                 

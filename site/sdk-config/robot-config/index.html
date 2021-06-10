@@ -18,7 +18,7 @@
     
     
       
-        <title>1.0 Robot Configuration - d.ASH SDK</title>
+        <title>2.0 Robot Configuration - d.ASH SDK</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1.0 Robot Configuration
+              2.0 Robot Configuration
             
           </span>
         </div>
@@ -240,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../rest-config/" class="md-tabs__link md-tabs__link--active">
         SDK Configuration
       </a>
     </li>
@@ -472,7 +472,7 @@
   
     <li class="md-nav__item">
       <a href="../../getting-started/UE-client/" class="md-nav__link">
-        3.0 Setting up d.ASH Autonomy Controller
+        3.0 d.ASH Autonomy Controller
       </a>
     </li>
   
@@ -549,6 +549,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../rest-config/" class="md-nav__link">
+        1.0 Rest Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -561,12 +573,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          1.0 Robot Configuration
+          2.0 Robot Configuration
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        1.0 Robot Configuration
+        2.0 Robot Configuration
       </a>
       
         
@@ -584,30 +596,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#11-config-file" class="md-nav__link">
-    1.1 Config File
+  <a href="#21-config-file" class="md-nav__link">
+    2.1 Config File
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-definitions" class="md-nav__link">
-    1.2 Definitions
+  <a href="#22-definitions" class="md-nav__link">
+    2.2 Definitions
   </a>
   
-    <nav class="md-nav" aria-label="1.2 Definitions">
+    <nav class="md-nav" aria-label="2.2 Definitions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#121-main" class="md-nav__link">
-    1.2.1 Main
+  <a href="#221-main" class="md-nav__link">
+    2.2.1 Main
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#122-intel-realsense-configuration" class="md-nav__link">
-    1.2.2 Intel RealSense Configuration
+  <a href="#222-intel-realsense-configuration" class="md-nav__link">
+    2.2.2 Intel RealSense Configuration
   </a>
   
 </li>
@@ -631,7 +643,7 @@
   
     <li class="md-nav__item">
       <a href="../auto-config/" class="md-nav__link">
-        2.0 Auto Configuration
+        3.0 Auto Configuration
       </a>
     </li>
   
@@ -658,7 +670,7 @@
                 
                 <h1 id="robot-configuration">Robot Configuration</h1>
 <p>This section of the d.ASH SDK documentation provides details about the configuration file for the robot <code>robotConfig.json</code>. Information in this section includes variable and definitions used to configure the <a href="../..#dash-server">d.ASH server</a>.</p>
-<h3 id="11-config-file">1.1 <ins>Config File</ins></h3>
+<h3 id="21-config-file">2.1 <ins>Config File</ins></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;serverAddress&quot;</span> <span class="p">:</span> <span class="s2">&quot;localhost:50051&quot;</span><span class="p">,</span>
     <span class="nt">&quot;robotHostname&quot;</span> <span class="p">:</span> <span class="s2">&quot;192.168.80.3&quot;</span><span class="p">,</span>
@@ -691,8 +703,8 @@
 </code></pre></div>
 <p>&nbsp;</p>
 
-<h3 id="12-definitions">1.2 <ins>Definitions</ins></h3>
-<h4 id="121-main">1.2.1 Main</h4>
+<h3 id="22-definitions">2.2 <ins>Definitions</ins></h3>
+<h4 id="221-main">2.2.1 Main</h4>
 <ul>
 <li><strong><code>serverAddress</code></strong> : Sets address of the spotServer in <code>&lt;HOSTNAME&gt;:&lt;PORT&gt;</code> format.</li>
 <li><strong><code>robotHostname</code></strong> : Sets hostname of the Spot to connect to robot's IP.</li>
@@ -708,7 +720,7 @@
 <li><strong><code>withAudio</code></strong> : Enables audio streaming playback.</li>
 </ul>
 <hr />
-<h4 id="122-intel-realsense-configuration">1.2.2 Intel RealSense Configuration</h4>
+<h4 id="222-intel-realsense-configuration">2.2.2 Intel RealSense Configuration</h4>
 <ul>
 <li><strong><code>test</code></strong>: Enables simulation of camera streaming via provided custom mp4 video files specified as a list in <code>testFilenames</code>.</li>
 <li><strong><code>testFilenames</code></strong>: List of test files.</li>
@@ -760,7 +772,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../getting-started/waypoint/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6.0 Waypoint recording and sending" rel="prev">
+        <a href="../rest-config/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1.0 Rest Configuration" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -769,20 +781,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              6.0 Waypoint recording and sending
+              1.0 Rest Configuration
             </div>
           </div>
         </a>
       
       
         
-        <a href="../auto-config/" class="md-footer__link md-footer__link--next" aria-label="Next: 2.0 Auto Configuration" rel="next">
+        <a href="../auto-config/" class="md-footer__link md-footer__link--next" aria-label="Next: 3.0 Auto Configuration" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              2.0 Auto Configuration
+              3.0 Auto Configuration
             </div>
           </div>
           <div class="md-footer__button md-icon">

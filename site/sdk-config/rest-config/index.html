@@ -18,7 +18,7 @@
     
     
       
-        <title>Rest Configuration - d.ASH SDK</title>
+        <title>1.0 Rest Configuration - d.ASH SDK</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rest Configuration
+              1.0 Rest Configuration
             
           </span>
         </div>
@@ -232,13 +232,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../robot-config/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         SDK Configuration
       </a>
     </li>
@@ -470,7 +472,7 @@
   
     <li class="md-nav__item">
       <a href="../../getting-started/UE-client/" class="md-nav__link">
-        3.0 Setting up d.ASH Autonomy Controller
+        3.0 d.ASH Autonomy Controller
       </a>
     </li>
   
@@ -524,12 +526,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         SDK Configuration
@@ -545,10 +549,89 @@
             
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          1.0 Rest Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        1.0 Rest Configuration
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-config-file" class="md-nav__link">
+    1.1 Config File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-definitions" class="md-nav__link">
+    1.2 Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-main" class="md-nav__link">
+    1.2.1 Main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-dash-server-commands" class="md-nav__link">
+    1.2.2 d.ASH Server Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
   
     <li class="md-nav__item">
       <a href="../robot-config/" class="md-nav__link">
-        1.0 Robot Configuration
+        2.0 Robot Configuration
       </a>
     </li>
   
@@ -560,7 +643,7 @@
   
     <li class="md-nav__item">
       <a href="../auto-config/" class="md-nav__link">
-        2.0 Auto Configuration
+        3.0 Auto Configuration
       </a>
     </li>
   
@@ -604,6 +687,23 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="12-definitions">1.2 <ins>Definitions</ins></h3>
+<h4 id="121-main">1.2.1 Main</h4>
+<ul>
+<li><strong><code>port</code></strong>:</li>
+<li><strong><code>certFilename</code></strong>:</li>
+<li><strong><code>keyFilename</code></strong>:</li>
+<li><strong><code>dhParamsFilename</code></strong>:</li>
+<li><strong><code>robotRegisterNativeCert</code></strong>:  If you registed with register_bot_native, the data will be encrypted. Always set this variable to true.</li>
+<li><strong><code>activeIPIdx</code></strong>: Selects the IP address you will send to the backend cloud service for robot discovery. This is an integer index ( from 0 to N ), based on the IP addresses available on your system. When the rest service starts up, you should see a list. Set the value to the appropriate index you want. This index will map the the IP which the clients will try to connect to</li>
+<li><strong><code>preferredIP</code></strong>: Selects your preferred IP from the list of IPs. Specify the IP as a string in this case.</li>
+</ul>
+<hr />
+<h4 id="122-dash-server-commands">1.2.2 d.ASH Server Commands</h4>
+<ul>
+<li><strong><code>cmdStr</code></strong> : </li>
+<li><strong><code>cmdPath</code></strong> : </li>
+</ul>
                 
               
               
@@ -623,6 +723,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../getting-started/waypoint/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6.0 Waypoint recording and sending" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              6.0 Waypoint recording and sending
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../robot-config/" class="md-footer__link md-footer__link--next" aria-label="Next: 2.0 Robot Configuration" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              2.0 Robot Configuration
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

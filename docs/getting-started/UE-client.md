@@ -16,7 +16,7 @@ As mentioned previously, the d.ASH autonomy controller is the GUI (graphical use
 
 ### 3.2 ^^Login^^
 
-The login tab allow dConstruct users to log into the d.ASH autonomy controller using their cloud admin credentials.
+The login icon allow dConstruct users to log into the d.ASH autonomy controller using their cloud admin credentials.
 
 
 ![Screenshot](img/login.png#center){: style="width:500px" }
@@ -25,7 +25,7 @@ Ensure login credentials match ...
 
 ### 3.3 ^^Robot Connection^^
 
-The robot connection tab allow users to connect/disconnect their respective robots to the d.ASH autonomy controller.
+The robot connection icon allow users to connect/disconnect their respective robots to the d.ASH autonomy controller.
 
 ![Screenshot](img/robot-connect.png#center){: style="width:500px" }
 
@@ -47,7 +47,7 @@ The robot connection tab allow users to connect/disconnect their respective robo
 
 ### 3.4 ^^Routes^^
 
-The routes tab allow users to set routes for the robot to follow using waypoints. Add/remove waypoints to build your own custom routes.
+The routes icon allow users to set routes for the robot to follow using waypoints. Add/remove waypoints to build your own custom routes.
 
 #### 3.4.1 Route Controls
 
@@ -81,7 +81,7 @@ You can also adjust the elevation of the grid by pressing the key `ctrl` and the
 
 ### 3.5 ^^Map Settings^^
 
-The map settings tab allow users to adjust highpass, lowpass, UV Scale, and UV offset settings to customise the visuals of your map/
+The map settings icon allow users to adjust highpass, lowpass, UV Scale, and UV offset settings to customise the visuals of your map/
 
 ![Screenshot](img/map.png#center){: style="width:500px" }
 
@@ -93,13 +93,13 @@ Notice that the ceiling voxels have now been cropped by reducing the low pass.
 
 ### 3.6 ^^Layer Visibility^^
 
-The layer visibility tab allow users to toggle the visibility of various items on the map.
+The layer visibility icon allow users to toggle the visibility of various items on the map.
 
 ![Screenshot](img/layer.png#center){: style="width:500px" }
 
 ### 3.7 ^^Load Scans^^
 
-The load scans tab allow users to preview scans from the d.ASH Pack.
+The load scans icon allow users to preview scans from the d.ASH Pack.
 
 ![Screenshot](img/load-scan.png#center){: style="width:500px" }
 

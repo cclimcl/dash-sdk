@@ -89,7 +89,7 @@ nav:
   - Getting Started:
     - 1.0 Configuring Spot: getting-started/config-spot.md
     - 2.0 Configuring Sensors: getting-started/config-connect.md
-    - 3.0 Setting up d.ASH Autonomy Controller: getting-started/UE-client.md
+    - 3.0 d.ASH Autonomy Controller: getting-started/UE-client.md
     - 4.0 Map Loading: getting-started/map-loading.md
     - 5.0 Localisation: getting-started/localization.md
     - 6.0 Waypoint recording and sending: getting-started/waypoint.md
