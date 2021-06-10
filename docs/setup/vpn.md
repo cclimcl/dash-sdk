@@ -66,7 +66,7 @@ sudo systemctl enable openvpn-client@client.service
 
 ---
 
-### ^^Setting Up VPN Remotely^^
+### ^^Setting Up VPN Remote Client^^
 
 Remember to use a separate login credential from the robot onboard computer credentials as at any point in time, there can only be one active user session.
 

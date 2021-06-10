@@ -2,7 +2,6 @@
 As mentioned, the ROS driver is a ROS node handles computational calls and sends control commands to the d.ASH server. It acts as an intermediate layer for ROS messages to be communicated with d.ASH server and unreal-clients through [gRPC](https://grpc.io/docs/what-is-grpc/introduction/).
 
 
-
 ### 4.1 ^^Update External Libraries^^ 
 
 First, let's update the external libs, more specifically the `grpc_layer`, by executing the following commands:
@@ -14,6 +13,9 @@ $ git submodule update --remote --merge
 
 
 ### 4.2 ^^Prerequisite^^
+
+INSTALL VCPKG
+
 Now, we need to use vcpkg to install following packages to set up the ROS Driver:
 
 ```
@@ -43,7 +45,7 @@ $ sudo apt-get install libsecret-1-dev
 
 
 ### 4.3 ^^Configuration^^
-Now, we need to place the `pyConfig.json`  into the folder `~/.data`. Similarly, make sure security files are stored in the folder `~/.data/security/`.
+Now, we need to place the [`autoConfig.json`](/sdk-config/auto-config.md)  into the folder `~/.data`. Similarly, make sure security files are stored in the folder `~/.data/security/`.
 
   
 ### 4.4 ^^Running the Driver^^
