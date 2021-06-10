@@ -95,7 +95,6 @@ nav:
     - 2.0 Configuring Sensors: getting-started/config-connect.md
     - 3.0 d.ASH Autonomy Controller: getting-started/UE-client.md
     - 4.0 Map Loading: getting-started/map-loading.md
-    - 5.0 Waypoint recording and sending: getting-started/waypoint.md
   - SDK Configuration:
     - 1.0 Rest Configuration: sdk-config/rest-config.md
     - 2.0 Robot Configuration: sdk-config/robot-config.md

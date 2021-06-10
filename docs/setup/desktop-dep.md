@@ -58,27 +58,18 @@ The d.ASH SDK works with [Python 3.7](https://www.python.org/downloads/release/p
 
 ---
 
-#### 1.5.1 Pip Installation
+#### 1.5.1 apt-get
+Installed in Ubuntu and any Ubuntu-based Linux distribution, `apt-get` is tool for installing, upgrading, and cleaning packages. To set up the new environment, execute the following command:
+```
+$ sudo apt-get install -y python3.7-dev
+```
+
+#### 1.5.2 Pip Installation
 [Pip](https://pip.pypa.io/en/stable/installing/) is a package installer for Python. The d.ASH SDK and the third-party packages used by many of its programming examples use pip to install. To install pip, run the following command on Ubuntu:
 
 ``` python3
 sudo apt install python3.7 python3-pip python-pip
 python3.7 -m pip instal -- upgrade pip
 ```
-It is recommended that you install an environment for Python. There are two ways to set up the Python 3.7 environment: via Conda or `apt-get`. 
 
----
-
-#### 1.5.2 Conda Installation
-Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. First, install [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation). Then, to set up the new environment, execute the following command: 
-```
-$ conda create --name py37 python=3.7
-```
-
-
-#### 1.5.3 apt-get
-If Conda is not installed, you can choose to use `apt-get` to an environment for Python. Installed in Ubuntu and any Ubuntu-based Linux distribution, `apt-get` is tool for installing, upgrading, and cleaning packages. To set up the new environment, execute the following command:
-```
-$ sudo apt-get install -y python3.7-dev
-```
 ---
