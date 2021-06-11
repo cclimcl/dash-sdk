@@ -70,7 +70,6 @@ sudo systemctl enable openvpn-client@client.service
 
 Remember to use a separate login credential from the robot onboard computer credentials as at any point in time, there can only be one active user session.
 
-
-Fistly, download [OpenVPN Connect](https://openvpn.net/client-connect-vpn-for-windows/). Then, click on the _'Import from File'_ tab and drag-and-drop the `client.ovpn` file located in `\dash-sdk\vpn\<USERNAME>`.
+Firstly, download [OpenVPN Connect](https://openvpn.net/client-connect-vpn-for-windows/). Once OpenVPN has been launched, click on the tab - _'Import from File'_ tab and drag-and-drop the `client.ovpn` file located in `\dash-sdk\vpn\<USERNAME>`. It is important to note that the `client.ovpn` file has to be in the same directory as there certification files, namely `.ca .cer .key`.
 
 
