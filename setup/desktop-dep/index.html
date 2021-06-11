@@ -242,6 +242,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../getting-started/UE-client/" class="md-tabs__link">
+        Autonomy Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../sdk-config/rest-config/" class="md-tabs__link">
         SDK Configuration
       </a>
@@ -442,22 +458,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#151-pip-installation" class="md-nav__link">
-    1.5.1 Pip Installation
+  <a href="#151-apt-get" class="md-nav__link">
+    1.5.1 apt-get
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#152-conda-installation" class="md-nav__link">
-    1.5.2 Conda Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#153-apt-get" class="md-nav__link">
-    1.5.3 apt-get
+  <a href="#152-pip-installation" class="md-nav__link">
+    1.5.2 Pip Installation
   </a>
   
 </li>
@@ -582,32 +591,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/UE-client/" class="md-nav__link">
-        3.0 d.ASH Autonomy Controller
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../getting-started/map-loading/" class="md-nav__link">
-        4.0 Map Loading
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/waypoint/" class="md-nav__link">
-        5.0 Waypoint recording and sending
+        3.0 Map Loading
       </a>
     </li>
   
@@ -633,11 +618,53 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
+        Autonomy Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Autonomy Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Autonomy Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/UE-client/" class="md-nav__link">
+        d.ASH Autonomy Controller
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         SDK Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="SDK Configuration" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           SDK Configuration
         </label>
@@ -743,21 +770,15 @@ $ sudo apt-get install ffmpeg libavcodec-dev libavdevice-dev libavfilter-dev lib
 <h3 id="15-python-requirements">1.5 <ins>Python Requirements</ins></h3>
 <p>The d.ASH SDK works with <a href="https://www.python.org/downloads/release/python-370/">Python 3.7</a>. To properly run the server, you will also need to install a python package installer and a python environment management system.</p>
 <hr />
-<h4 id="151-pip-installation">1.5.1 Pip Installation</h4>
-<p><a href="https://pip.pypa.io/en/stable/installing/">Pip</a> is a package installer for Python. The d.ASH SDK and the third-party packages used by many of its programming examples use pip to install. To install pip, run the following command on Ubuntu:</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="mf">.7</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
-<span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">instal</span> <span class="o">--</span> <span class="n">upgrade</span> <span class="n">pip</span>
-</code></pre></div>
-It is recommended that you install an environment for Python. There are two ways to set up the Python 3.7 environment: via Conda or <code>apt-get</code>. </p>
-<hr />
-<h4 id="152-conda-installation">1.5.2 Conda Installation</h4>
-<p>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. First, install <a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation">Conda</a>. Then, to set up the new environment, execute the following command: 
-<div class="highlight"><pre><span></span><code>$ conda create --name py37 python=3.7
-</code></pre></div></p>
-<h4 id="153-apt-get">1.5.3 apt-get</h4>
-<p>If Conda is not installed, you can choose to use <code>apt-get</code> to an environment for Python. Installed in Ubuntu and any Ubuntu-based Linux distribution, <code>apt-get</code> is tool for installing, upgrading, and cleaning packages. To set up the new environment, execute the following command:
+<h4 id="151-apt-get">1.5.1 apt-get</h4>
+<p>Installed in Ubuntu and any Ubuntu-based Linux distribution, <code>apt-get</code> is tool for installing, upgrading, and cleaning packages. To set up the new environment, execute the following command:
 <div class="highlight"><pre><span></span><code>$ sudo apt-get install -y python3.7-dev
 </code></pre></div></p>
+<h4 id="152-pip-installation">1.5.2 Pip Installation</h4>
+<p><a href="https://pip.pypa.io/en/stable/installing/">Pip</a> is a package installer for Python. The d.ASH SDK and the third-party packages used by many of its programming examples use pip to install. To install pip, run the following command on Ubuntu:</p>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="mf">.7</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">python3</span><span class="mf">.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">instal</span> <span class="o">--</span> <span class="n">upgrade</span> <span class="n">pip</span>
+</code></pre></div>
 <hr />
                 
               

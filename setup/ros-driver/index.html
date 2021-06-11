@@ -242,6 +242,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../getting-started/UE-client/" class="md-tabs__link">
+        Autonomy Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../sdk-config/rest-config/" class="md-tabs__link">
         SDK Configuration
       </a>
@@ -548,32 +564,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/UE-client/" class="md-nav__link">
-        3.0 d.ASH Autonomy Controller
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../getting-started/map-loading/" class="md-nav__link">
-        4.0 Map Loading
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/waypoint/" class="md-nav__link">
-        5.0 Waypoint recording and sending
+        3.0 Map Loading
       </a>
     </li>
   
@@ -599,11 +591,53 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
+        Autonomy Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Autonomy Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Autonomy Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/UE-client/" class="md-nav__link">
+        d.ASH Autonomy Controller
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         SDK Configuration
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="SDK Configuration" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           SDK Configuration
         </label>
@@ -672,6 +706,7 @@
 $ git submodule update --remote --merge
 </code></pre></div>
 <h3 id="42-prerequisite">4.2 <ins>Prerequisite</ins></h3>
+<p>INSTALL VCPKG</p>
 <p>Now, we need to use vcpkg to install following packages to set up the ROS Driver:</p>
 <p><div class="highlight"><pre><span></span><code>$ cd ~/vcpkg
 $ ./vcpkg install grpc:x64-linux
@@ -695,7 +730,7 @@ $ sudo apt install libudev-dev
 $ sudo apt-get install libsecret-1-dev
 </code></pre></div>
 <h3 id="43-configuration">4.3 <ins>Configuration</ins></h3>
-<p>Now, we need to place the <code>pyConfig.json</code>  into the folder <code>~/.data</code>. Similarly, make sure security files are stored in the folder <code>~/.data/security/</code>.</p>
+<p>Now, we need to place the <a href="/sdk-config/auto-config.md"><code>autoConfig.json</code></a>  into the folder <code>~/.data</code>. Similarly, make sure security files are stored in the folder <code>~/.data/security/</code>.</p>
 <h3 id="44-running-the-driver">4.4 <ins>Running the Driver</ins></h3>
 <p>Once compiled, run executable SDK to start autonomy driver
 <div class="highlight"><pre><span></span><code>./ros_msg_interface ~/.data/autoConfig.json
