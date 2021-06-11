@@ -4,7 +4,7 @@ Two separate login credentials are required for two seperate VPN connectiosn - o
 
 ---
 
-### ^^Setting Up VPN Onboard Computer^^
+### 4.1 ^^Setting Up VPN Onboard Computer^^
 
 To start, you will need to install some packages to configure automatic VPN connection on Ubuntu 18.04 LTS by executing the following command:
 
@@ -14,31 +14,49 @@ sudo apt install network-manager-openvpn network-manager-openvpn-gnome openvpn o
 
 This will install an `openvpn` package, which creates a `/etc/openvpn/client/` directory into which you can place the OpenVPN client configuration file. You will need to configure the VPN configuration file - `client.ovpn` which can be found in your vpn folder `/dash_sdk/vpn`. To do so, run the following command:
 
+``` sh
+dash-sdk/
+└─ vpn/
+    └─ client.ovpn
+    └─ ca.crt
+    └─ <user>.crt
+    └─ <user>.key
+```
+Note that `<user>` in this instance is replaced by your dConstruct admin username.
 
 ```
 RUN A SCRIPT TO CHANGE PATHS 
 ```
 
 
-Now, you will need to copy `client.ovpn` as well as your client folder into the new open-vpn directory. In the `/dash_sdk` directory, execute the following commands:
+Now, you will need to copy `client.ovpn` and your user certifications - `ca.crt`, `<user>.crt`, `<user>.key` - into the new open-vpn directory. In the `/dash_sdk` directory, execute the following commands:
 
 ``` python3
 sudo cp client.ovpn /etc/openvpn/client/client.conf 
-sudo cp -r <USERNAME>/ /etc/openvpn/client
+sudo cp ca.crt <user>.crt <user>.key /etc/openvpn/client
 ```
 
-For example, in the directory `/dash_sdk/vpn`, if your client folder is named `dc`, you would run as such, replacing `<USERNAME>` with your client folder name:
+For example, if your dConstruct admin username is `user123`, you would replacing `<user>` with `user123`:
 
 ``` python3
 sudo cp client.ovpn /etc/openvpn/client/client.conf 
-sudo cp -r dc/ /etc/openvpn/client
+sudo cp ca.crt user123.crt user123.key /etc/openvpn/client
 ```
 
-To check that your files have been copied and renamed correctly, `cd` into the `/etc/openvpn/client` directory and `ls` to see your list of files. You should have `client.conf` and `<USERNAME>` client folder present:
+To check that your files have been copied and renamed correctly, `cd` into the `/etc/openvpn/client` directory and `ls` to see your list of files. You should have `client.conf` and your user certification files, namely `ca.crt .crt .`:
+
 ``` python3
-$ cd /etc/openvpn/client
-$ ls
-client.conf <client_folder>
+cd /etc/openvpn/client
+ls
+```
+``` sh
+etc/
+└─ openvpn/
+    └─ client/
+        └─ client.conf
+        └─ ca.crt
+        └─ <user>.crt
+        └─ <user>.key
 ```
 
 Now, let's test that the VPN service was set up correctly by running the following command:
@@ -49,9 +67,9 @@ sudo systemctl start openvpn-client@client.service
 If there is no error print, proceed onto the next step. If you come across a failure, ensure that the path in `client.conf` matches the following format:
 
 ```python3
-cat \etc\openvpn\client\<USERNAME>\ca.crt
-cert \etc\openvpn\client\<USERNAME>\<USERNAME>.crt
-key \etc\openvpn\client\<USERNAME>\<USERNAME>.crt
+cat \etc\openvpn\client\ca.crt
+cert \etc\openvpn\client\<user>.crt
+key \etc\openvpn\client\<user>.crt
 ```
 
 Now, to check your VPN status, enter the following command: 
@@ -66,10 +84,17 @@ sudo systemctl enable openvpn-client@client.service
 
 ---
 
-### ^^Setting Up VPN Remote Client^^
+### 4.2 ^^Setting Up VPN Remote Client^^
 
 Remember to use a separate login credential from the robot onboard computer credentials as at any point in time, there can only be one active user session.
 
-Firstly, download [OpenVPN Connect](https://openvpn.net/client-connect-vpn-for-windows/). Once OpenVPN has been launched, click on the tab - _'Import from File'_ tab and drag-and-drop the `client.ovpn` file located in `\dash-sdk\vpn\<USERNAME>`. It is important to note that the `client.ovpn` file has to be in the same directory as there certification files, namely `.ca .cer .key`.
+Firstly, download [OpenVPN Connect](https://openvpn.net/client-connect-vpn-for-windows/). Once OpenVPN has been launched, click on the tab - _'Import from File'_ tab and drag-and-drop the `client.ovpn` file located in `\dash-sdk\vpn\<USERNAME>`. It is important to note that the `client.ovpn` file has to be in the same directory as there certification files, namely `ca.crt .crt .key`:
 
-
+``` sh
+dash-sdk/
+└─ vpn/
+    └─ client.ovpn
+    └─ ca.crt
+    └─ user.crt
+    └─ user.key
+```
