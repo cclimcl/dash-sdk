@@ -3,7 +3,7 @@
 As mentioned previously, the d.ASH autonomy controller is the GUI (graphical user interface) for the d.ASH SDK. It encompasses the interactive visual components for d.ASH's software and displays different elements for users to interact with to control your robot. This section of the d.ASH SDK documentation provides details about setting up the d.ASH autonomy controller, including information on its respective components.
 
 ---
-### 3.1 ^^Main Components^^
+### ^^Main Components^^
 
 <!-- ![Screenshot](img/main.png){: style="width:400px"} -->
 
@@ -21,7 +21,7 @@ As mentioned previously, the d.ASH autonomy controller is the GUI (graphical use
 <p>&nbsp;</p>
 ---
 
-### 3.2 ^^Login^^
+### ^^Login^^
 
 ![Screenshot](img/login.png#center){ align=left style="width:350px"}
 
@@ -33,7 +33,7 @@ The login icon allow dConstruct users to log into the d.ASH autonomy controller 
 <p>&nbsp;</p>
 ---
 
-### 3.3 ^^Robot Connection^^
+### ^^Robot Connection^^
 
 The robot connection icon allow users to connect/disconnect their respective robots to the d.ASH autonomy controller. 
 
@@ -57,11 +57,11 @@ It tells the robot where its rough initial position is. To initialize `init pose
 <p>&nbsp;</p>
 ---
 
-### 3.4 ^^Routes^^
+### ^^Routes^^
 
 The routes icon allow users to set routes for the robot to follow using waypoints. Add/remove waypoints to build your own custom routes.
 
-#### 3.4.1 Route Controls
+#### Route Controls
 
 ![Screenshot](img/routes.png#center){ align=left style="width:350px"}
 
@@ -75,7 +75,7 @@ The routes icon allow users to set routes for the robot to follow using waypoint
 <p>&nbsp;</p>
 ---
 
-#### 3.4.1 Setting Up Routes
+#### Setting Up Routes
 
 ![Screenshot](img/waypoint-1.png#center){ align=left style="width:350px"}
 
@@ -101,7 +101,7 @@ You can also adjust the elevation of the grid by pressing the key `ctrl` and the
 <p>&nbsp;</p>
 ---
 
-### 3.5 ^^Map Settings^^
+### ^^Map Settings^^
 
 The map settings icon allow users to adjust highpass, lowpass, UV Scale, and UV offset settings to customise the visuals of your map.
 
@@ -128,7 +128,7 @@ Notice that the ceiling voxels have now been cropped by reducing the low pass.
 <p>&nbsp;</p>
 ---
 
-### 3.6 ^^Layer Visibility^^
+### ^^Layer Visibility^^
 
 ![Screenshot](img/layer.png#center){ align=left style="width:350px"}
 
@@ -144,7 +144,7 @@ The layer visibility icon allow users to toggle the visibility of various items 
 <p>&nbsp;</p>
 ---
 
-### 3.7 ^^Load Scans^^
+### ^^Load Scans^^
 
 The load scans icon allow users to preview scans from the d.ASH Pack.
 
