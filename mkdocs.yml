@@ -26,9 +26,11 @@ theme:
   font:
     text: Barlow
     code: Roboto Mono
-  favicon: assets/favicon.png
-  icon:
-    logo: logo
+    logo: 'img/white.png'
+    favicon: 'img/logo.png'
+  # favicon: white.png
+  # icon:
+  #   logo: logo
 
   features:
     # - navigation.instant

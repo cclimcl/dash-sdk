@@ -13,7 +13,7 @@
       
         <link rel="canonical" href="https://dconstruct-tech.github.io/dash-sdk-test/setup/ros-driver/">
       
-      <link rel="icon" href="../../assets/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
     
     
@@ -83,12 +83,7 @@
     <a href="https://www.dconstruct.co/" title="d.ASH SDK" class="md-header__button md-logo" aria-label="d.ASH SDK" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
-  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
-  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
-  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
-  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
-</svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -290,12 +285,7 @@
     <a href="https://www.dconstruct.co/" title="d.ASH SDK" class="md-nav__button md-logo" aria-label="d.ASH SDK" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
-  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
-  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
-  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
-  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
-</svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     d.ASH SDK
@@ -470,29 +460,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#41-update-external-libraries" class="md-nav__link">
-    4.1 Update External Libraries
+  <a href="#51-update-external-libraries" class="md-nav__link">
+    5.1 Update External Libraries
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-prerequisite" class="md-nav__link">
-    4.2 Prerequisite
+  <a href="#52-installing-vcpkg" class="md-nav__link">
+    5.2 Installing Vcpkg
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#43-configuration" class="md-nav__link">
-    4.3 Configuration
+  <a href="#53-configuration" class="md-nav__link">
+    5.3 Configuration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#44-running-the-driver" class="md-nav__link">
-    4.4 Running the Driver
+  <a href="#54-running-the-driver" class="md-nav__link">
+    5.4 Running the Driver
   </a>
   
 </li>
@@ -700,14 +690,13 @@
                 
                 <h1 id="ros-driver">ROS Driver</h1>
 <p>As mentioned, the ROS driver is a ROS node handles computational calls and sends control commands to the d.ASH server. It acts as an intermediate layer for ROS messages to be communicated with d.ASH server and unreal-clients through <a href="https://grpc.io/docs/what-is-grpc/introduction/">gRPC</a>.</p>
-<h3 id="41-update-external-libraries">4.1 <ins>Update External Libraries</ins></h3>
+<h3 id="51-update-external-libraries">5.1 <ins>Update External Libraries</ins></h3>
 <p>First, let's update the external libs, more specifically the <code>grpc_layer</code>, by executing the following commands:</p>
 <div class="highlight"><pre><span></span><code>$ git submodule update --init --recursive
 $ git submodule update --remote --merge
 </code></pre></div>
-<h3 id="42-prerequisite">4.2 <ins>Prerequisite</ins></h3>
-<p>INSTALL VCPKG</p>
-<p>Now, we need to use vcpkg to install following packages to set up the ROS Driver:</p>
+<h3 id="52-installing-vcpkg">5.2 <ins>Installing Vcpkg</ins></h3>
+<p>Vcpkg is a tool to manage C and C++ libraries on Windows, Linux and MacOS. Firtsly, you'll need to <a href="https://www.programmersought.com/article/92525780986/">install <code>vcpkg</code></a>. Once installed, we need to use vcpkg to download the following packages to set up the ROS Driver:</p>
 <p><div class="highlight"><pre><span></span><code>$ cd ~/vcpkg
 $ ./vcpkg install grpc:x64-linux
 $ ./vcpkg install nlohmann-json:x64-linux
@@ -729,9 +718,9 @@ $ sudo apt install librealsense2*
 $ sudo apt install libudev-dev
 $ sudo apt-get install libsecret-1-dev
 </code></pre></div>
-<h3 id="43-configuration">4.3 <ins>Configuration</ins></h3>
+<h3 id="53-configuration">5.3 <ins>Configuration</ins></h3>
 <p>Now, we need to place the <a href="/sdk-config/auto-config.md"><code>autoConfig.json</code></a>  into the folder <code>~/.data</code>. Similarly, make sure security files are stored in the folder <code>~/.data/security/</code>.</p>
-<h3 id="44-running-the-driver">4.4 <ins>Running the Driver</ins></h3>
+<h3 id="54-running-the-driver">5.4 <ins>Running the Driver</ins></h3>
 <p>Once compiled, run executable SDK to start autonomy driver
 <div class="highlight"><pre><span></span><code>./ros_msg_interface ~/.data/autoConfig.json
 </code></pre></div></p>

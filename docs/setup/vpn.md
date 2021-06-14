@@ -22,16 +22,10 @@ dash-sdk/
     └─ <user>.crt
     └─ <user>.key
 ```
-Note that `<user>` in this instance is replaced by your dConstruct admin username.
-
-```
-RUN A SCRIPT TO CHANGE PATHS 
-```
-
-
-Now, you will need to copy `client.ovpn` and your user certifications - `ca.crt`, `<user>.crt`, `<user>.key` - into the new open-vpn directory. In the `/dash_sdk` directory, execute the following commands:
+Note that `<user>` in this instance is replaced by your dConstruct admin username. Now, you will need to copy `client.ovpn` and your user certifications - `ca.crt`, `<user>.crt`, `<user>.key` - into the new open-vpn directory. In the `/dash_sdk` directory, execute the following commands:
 
 ``` python3
+python3.7 configVPN.py
 sudo cp client.ovpn /etc/openvpn/client/client.conf 
 sudo cp ca.crt <user>.crt <user>.key /etc/openvpn/client
 ```

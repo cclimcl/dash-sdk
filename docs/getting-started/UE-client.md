@@ -19,6 +19,7 @@ As mentioned previously, the d.ASH autonomy controller is the GUI (graphical use
 4. ^^Floor grid^^
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 ---
 
 ### ^^Login^^
@@ -28,6 +29,7 @@ As mentioned previously, the d.ASH autonomy controller is the GUI (graphical use
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 The login icon allow dConstruct users to log into the d.ASH autonomy controller using their cloud admin credentials.
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -44,7 +46,7 @@ The robot connection icon allow users to connect/disconnect their respective rob
 3. ^^Add button^^: Press to connect to the robot selected in the online list to add the robot to the connected list.
 4. ^^Minus button^^: Press to disconnect from a robot in the connected list.
 <p>&nbsp;</p>
-
+<p>&nbsp;</p>
 
 ![Screenshot](img/init.png#center){ align=left style="width:350px"}
 <p>&nbsp;</p>
@@ -116,6 +118,7 @@ The map settings icon allow users to adjust highpass, lowpass, UV Scale, and UV 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 ![Screenshot](img/map-2.png#center){ align=left style="width:350px"}
@@ -153,6 +156,7 @@ The load scans icon allow users to preview scans from the d.ASH Pack.
 <p>&nbsp;</p>
 1. ^^Vox downsample size pannel^^: Select your down sample size (in metres). A large value means lower quality, but faster loading.
 2. ^^Point clouds button^^: Pick loaded point clouds to toggle translucency.
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

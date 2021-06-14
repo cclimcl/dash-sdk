@@ -13,7 +13,7 @@
       
         <link rel="canonical" href="https://dconstruct-tech.github.io/dash-sdk-test/setup/dash-server/">
       
-      <link rel="icon" href="../../assets/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
     
     
@@ -83,12 +83,7 @@
     <a href="https://www.dconstruct.co/" title="d.ASH SDK" class="md-header__button md-logo" aria-label="d.ASH SDK" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
-  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
-  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
-  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
-  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
-</svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -290,12 +285,7 @@
     <a href="https://www.dconstruct.co/" title="d.ASH SDK" class="md-nav__button md-logo" aria-label="d.ASH SDK" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
-  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
-  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
-  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
-  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
-</svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     d.ASH SDK
@@ -727,6 +717,21 @@ Now, in `realSenseCameras.py`, we need to make sure you have also compiled the p
 
 <h3 id="32-setting-up-rest-configuration">3.2 <ins>Setting up Rest Configuration</ins></h3>
 <p>Before you test the d.ASH server, you will need to config the rest server file, <a href="\sdk-config\rest-config"><code>restConfig.json</code></a> located in the folder <code>config</code>. </p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>Firstly, run <code>runrest</code> to see available IP address for your rest server:
+<div class="highlight"><pre><span></span><code><span class="n">runrest</span>
+</code></pre></div>
+Pick the index of the IP address you like and append it to the <code>activeIPIdx</code> variable:
+<div class="highlight"><pre><span></span><code>&quot;activeIPIdx&quot; : 1, # where &#39;1&#39; is the chosen IP address indec
+</code></pre></div>
+Then, you will need to set your <code>preferredIP</code> address, that is, the IP address for the computer onboard your robot. This IP address will have precedence over <code>activeIPIdx</code>. Similarly, replace the default IP address with your preferred IP address:
+<div class="highlight"><pre><span></span><code>&quot;preferredIP&quot; : &quot;10.8.0.5&quot;,
+</code></pre></div>
+Ensure that the IP address of the onboard computer is within the same subnet by the remote client. Lastly, you will need to change the <code>&lt;PATH&gt;</code> of <code>cmdPath</code>. To do this, <code>pwd</code> to print your current working directory path.
+<div class="highlight"><pre><span></span><code>$ pwd
+C:/Users/dc/Desktop/dash_sdk/py_server
+</code></pre></div></p>
 <hr />
 <h3 id="33-testing-your-server">3.3 <ins>Testing Your Server</ins></h3>
 <p>To test your server, you'll firstly need to run the d.ASH server by entering the following command: </p>

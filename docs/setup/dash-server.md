@@ -43,6 +43,27 @@ $ sys.path.append('C:/Users/kestr/Documents/Projects/Builds/dc/py_realsense_node
 
 Before you test the d.ASH server, you will need to config the rest server file, [`restConfig.json`](\sdk-config\rest-config) located in the folder `config`. 
 
+```
+
+```
+
+Firstly, run `runrest` to see available IP address for your rest server:
+```python
+runrest
+```
+Pick the index of the IP address you like and append it to the `activeIPIdx` variable:
+```
+"activeIPIdx" : 1, # where '1' is the chosen IP address indec
+```
+Then, you will need to set your `preferredIP` address, that is, the IP address for the computer onboard your robot. This IP address will have precedence over `activeIPIdx`. Similarly, replace the default IP address with your preferred IP address:
+```
+"preferredIP" : "10.8.0.5",
+```
+Ensure that the IP address of the onboard computer is within the same subnet by the remote client. Lastly, you will need to change the `<PATH>` of `cmdPath`. To do this, `pwd` to print your current working directory path.
+```
+$ pwd
+C:/Users/dc/Desktop/dash_sdk/py_server
+```
 ---
 
 ### 3.3 ^^Testing Your Server^^
