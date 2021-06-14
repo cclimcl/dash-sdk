@@ -44,7 +44,9 @@ $ sys.path.append('C:/Users/kestr/Documents/Projects/Builds/dc/py_realsense_node
 Before you test the d.ASH server, you will need to config the rest server file, [`restConfig.json`](\sdk-config\rest-config) located in the folder `config`. 
 
 ```
-
+dash-sdk/
+└─ configs/
+    └─ restConfiy.json
 ```
 
 Firstly, run `runrest` to see available IP address for your rest server:
