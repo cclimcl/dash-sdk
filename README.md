@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/img/dash-logo.png" width="70%" /><br><br></p>
+<p align="center"><img src="docs/img/dASH-logo.png" width="70%" /><br><br></p>
 
 -----------------
 
