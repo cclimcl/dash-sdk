@@ -10,9 +10,9 @@
 ## What’s included in the SDK:
 | What | Description | Download link|
 | ------- | ------- | ------- |
-| **[d.ASH Server](https://dconstruct-admin.github.io/dash-sdk-test/#dash-server)** | With this application, you can quickly access your Intel® RealSense™ Depth Camera to view the depth stream, visualize point clouds, record and playback streams, configure your camera settings, modify advanced controls, enable depth visualization and post processing  and much more. | [**Intel.RealSense.Viewer.exe**](https://github.com/IntelRealSense/librealsense/releases) |
-| **[ROS Driver](https://dconstruct-admin.github.io/dash-sdk-test/#ros-driver)** | This application allows you to test the camera’s depth quality, including: standard deviation from plane fit, normalized RMS – the subpixel accuracy, distance accuracy and fill rate. You should be able to easily get and interpret several of the depth quality metrics and record and save the data for offline analysis. |[**Depth.Quality.Tool.exe**](https://github.com/IntelRealSense/librealsense/releases) |
-| **[d.ASH Autonomy Controller](https://dconstruct-admin.github.io/dash-sdk-test/#dash-autonomy-controller)** | Device enumeration, FW logger, etc as can be seen at the tools directory | Included in [**Intel.RealSense.SDK.exe**](https://github.com/IntelRealSense/librealsense/releases)|
+| **[d.ASH Server](https://dconstruct-admin.github.io/dash-sdk-test/#dash-server)** | The d.ASH server acts as the main server responsible for sending control commands to the robot. At the same time, the d.ASH server also broadcasts secured data to any given remote systems.|
+| **[ROS Driver](https://dconstruct-admin.github.io/dash-sdk-test/#ros-driver)** | The ROS driver is a ROS node that has autonomy functions onboard to make your robot accessible from ROS. The ROS driver handles computational calls from any client and sends control commands to the d.ASH server. In turn, the d.ASH server relays the autonomy commands to the robot for execution.|
+| **[d.ASH Autonomy Controller](https://dconstruct-admin.github.io/dash-sdk-test/#dash-autonomy-controller)** | The d.ASH autonomy controller is the GUI (graphical user interface) for the d.ASH SDK. It encompasses the interactive visual components for d.ASH's software and displays different elements for users to interact with to control your robot.|
 
 ## License
 This project is licensed under the [BSD 2-Clause License](LICENSE).
