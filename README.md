@@ -8,8 +8,8 @@
 > :pushpin: For more information on the d.ASH SDK documentation, please refer to the [latest documentation release](https://dconstruct-admin.github.io/dash-sdk-test/).
 
 ## What’s included in the SDK:
-| What | Description | Download link|
-| ------- | ------- | ------- |
+| What | Description |
+| ------- | ------- |
 | **[d.ASH Server](https://dconstruct-admin.github.io/dash-sdk-test/#dash-server)** | The d.ASH server acts as the main server responsible for sending control commands to the robot. At the same time, the d.ASH server also broadcasts secured data to any given remote systems.|
 | **[ROS Driver](https://dconstruct-admin.github.io/dash-sdk-test/#ros-driver)** | The ROS driver is a ROS node that has autonomy functions onboard to make your robot accessible from ROS. The ROS driver handles computational calls from any client and sends control commands to the d.ASH server. In turn, the d.ASH server relays the autonomy commands to the robot for execution.|
 | **[d.ASH Autonomy Controller](https://dconstruct-admin.github.io/dash-sdk-test/#dash-autonomy-controller)** | The d.ASH autonomy controller is the GUI (graphical user interface) for the d.ASH SDK. It encompasses the interactive visual components for d.ASH's software and displays different elements for users to interact with to control your robot.|
