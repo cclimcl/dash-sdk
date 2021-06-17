@@ -9,4 +9,4 @@
 
 ## License
 This project is licensed under the [BSD 2-Clause License](LICENSE).
-Copyright 2018 Intel Corporation
+Copyright 2021 dConstruct Technologies Pte Ltd.
