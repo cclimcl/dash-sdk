@@ -1,11 +1,11 @@
 # Project information
 site_name: d.ASH SDK
-site_url: https://dconstruct-tech.github.io/dash-sdk-test/
+site_url: https://dconstruct-tech.github.io/dash-sdk/
 site_author: dConstruct Technologies Team
 
 # Repository
 repo_name: dconstruct-tech/dash-sdk
-repo_url: https://github.com/dconstruct-tech/dash-sdk-test/
+repo_url: https://github.com/dconstruct-tech/dash-sdk/
 edit_uri: ""
 
 theme:
