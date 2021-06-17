@@ -7,6 +7,13 @@
 
 > :pushpin: For more information on the d.ASH SDK documentation, please refer to the [latest documentation release](https://dconstruct-admin.github.io/dash-sdk-test/).
 
+## What’s included in the SDK:
+| What | Description | Download link|
+| ------- | ------- | ------- |
+| **[d.ASH Server](./tools/realsense-viewer)** | With this application, you can quickly access your Intel® RealSense™ Depth Camera to view the depth stream, visualize point clouds, record and playback streams, configure your camera settings, modify advanced controls, enable depth visualization and post processing  and much more. | [**Intel.RealSense.Viewer.exe**](https://github.com/IntelRealSense/librealsense/releases) |
+| **[ROS Driver](./tools/depth-quality)** | This application allows you to test the camera’s depth quality, including: standard deviation from plane fit, normalized RMS – the subpixel accuracy, distance accuracy and fill rate. You should be able to easily get and interpret several of the depth quality metrics and record and save the data for offline analysis. |[**Depth.Quality.Tool.exe**](https://github.com/IntelRealSense/librealsense/releases) |
+| **[d.ASH Autonomy Controller](./tools/)** | Device enumeration, FW logger, etc as can be seen at the tools directory | Included in [**Intel.RealSense.SDK.exe**](https://github.com/IntelRealSense/librealsense/releases)|
+
 ## License
 This project is licensed under the [BSD 2-Clause License](LICENSE).
 Copyright 2021 dConstruct Technologies Pte Ltd.
